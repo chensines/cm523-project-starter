@@ -18,67 +18,10 @@
 #welcome-page { 
     margin: 0;
     text-align: center;
-    background-image: url('https://github.com/chensines/cm523-project-starter/blob/main/images/sea1.jpg?raw=true'); 
-    height: 100vh;
-}
-
-.container:first-of-type {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    display: block;
-    width: 600px; 
-    height: auto;
-    margin-top: 2rem;
-}
-
-.container:first-of-type > h1 {
-    font-size: 100px;
-    font-family: "Bungee", "Open Sans";
-    color: white;
-    font-style: inherit;
-    margin-top: 1em;
-    text-shadow: 5px 5px 10px black;
-}
-
-.start-btn {
-    font-family: "Open Sans";
-    font-weight: bold;
-    font-size: 24px;
-    background-color: #1F396F;
-    color: white;
-    border-radius: 2px 2px 2px 2px;
-    padding: 0.5em 1em;
-    margin-top: 1em;
-}
-
-a:link {
-  text-decoration: none;
-  color: white;
-}
-/* ===== YOUR CSS GOES HERE ===== */
-/* ===== START BY IMPORTING YOUR FONTS ===== */ 
-/* ===== NEXT WRITE GLOBAL STYLES, THEN USE MEDIA QUERIES FOR LAYOUT/STYLE ADJUSTMENTS ===== */
-/* ===== STARTER CSS BELOW FOR body AND p IS JUST AN EXAMPLE... YOU MAY DELETE IT ===== */
-
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-
-#welcome-page { 
-    margin: 0;
-    text-align: center;
-    background-image: url('/Users/weiniharpertseng/Desktop/CM 523 Vscode/final-project/cm523-project-starter/images/64342681_127180625155696_3854347575264047524_n.jpg'); 
+    background-image: url('/Users/weiniharpertseng/Desktop/diving/cm523-project-starter/images/sea1.jpg'); 
     background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-position: bottom;
     height: 100vh;
 }
 
@@ -120,4 +63,3 @@ a:link {
   text-decoration: none;
   color: white;
 }
-
