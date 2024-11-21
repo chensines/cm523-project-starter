@@ -18,7 +18,7 @@
 #welcome-page { 
     margin: 0;
     text-align: center;
-    background-image: url('image/sea1.jpg'); 
+    background-image: url('https://github.com/chensines/cm523-project-starter/blob/main/images/sea1.jpg?raw=true'); 
     height: 100vh;
 }
 
