@@ -18,10 +18,7 @@
 #welcome-page { 
     margin: 0;
     text-align: center;
-    background-image: url('/Users/weiniharpertseng/Desktop/CM 523 Vscode/final-project/cm523-project-starter/images/64342681_127180625155696_3854347575264047524_n.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: bottom center;
+    background-image: url('/Users/weiniharpertseng/Desktop/diving/cm523-project-starter/images/sea1.jpg'); 
     height: 100vh;
 }
 
