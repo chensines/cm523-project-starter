@@ -18,28 +18,24 @@
 #welcome-page { 
     margin: 0;
     text-align: center;
-    background-image: url('/Users/weiniharpertseng/Desktop/diving/cm523-project-starter/images/sea1.jpg'); 
+    background-image: url('https://i.postimg.cc/3RkWFjxX/temp-Image8uv7-Io.avif'); 
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: bottom;
     height: 100vh;
-}
-
-.container:first-of-type {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 
-.logo {
+#logo-primary {
     display: block;
     width: 600px; 
     height: auto;
     margin-top: 2rem;
 }
 
-.container:first-of-type > h1 {
+#welcome-page > h1 {
     font-size: 100px;
     font-family: "Bungee", "Open Sans";
     color: white;
@@ -48,7 +44,7 @@
     text-shadow: 5px 5px 10px black;
 }
 
-.start-btn {
+#start-btn {
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 24px;
@@ -59,7 +55,100 @@
     margin-top: 1em;
 }
 
+#choose-divetype {
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
+    margin: 0;
+    padding: 2rem;
+}
+
+#logo-secondary {
+    display: block;
+    width: 150px;
+}
+
+h5 {
+    font-size: 16px;
+    font-family: "Bungee", "Open Sans";
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 48px;
+    font-family: 'Bungee','Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    color: white;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    gap: 40px;
+}
+
+.info {
+    text-decoration: none;
+    display: flex;
+    color: white;
+    padding: 0.5rem;
+    width: 35ch; 
+    margin: 3rem auto 0 auto;
+    text-align: justify;
+}
+
+#free {
+    grid-column: 2/ 3;
+    grid-row: 1;
+    background-image: url('https://i.postimg.cc/zv8TCn7X/temp-Image-Fqaj-Ez.avif');
+    background-size: 150%;
+    background-position: center;
+    height: 600px;
+    width: 400px;
+    font-size: 18px;
+}
+
+#scuba {
+    grid-column: 1/ 2;
+    grid-row: 1;
+    background-image: url('https://i.postimg.cc/gkpTmHrM/temp-Imageu-Dojwu.avif');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 600px;
+    width: 400px;
+    justify-self: right;
+    font-size: 18px;
+}
+
 a:link {
-  text-decoration: none;
-  color: white;
+    opacity: 20%;
+}
+
+a:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.choice {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #CDBFA4;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin: 5em auto auto auto;
+    display: flex;
+    justify-content: center;
 }
