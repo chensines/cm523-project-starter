@@ -18,7 +18,7 @@
 #welcome-page { 
     margin: 0;
     text-align: center;
-    background-image: url('/Users/weiniharpertseng/Desktop/diving/cm523-project-starter/images/sea1.jpg'); 
+    background-image: url('image/sea1.jpg'); 
     height: 100vh;
 }
 
