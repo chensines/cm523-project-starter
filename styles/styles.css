@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 
-
 #welcome-page { 
     margin: 0;
     text-align: center;
@@ -28,7 +27,7 @@
     align-items: center;
 }
 
-#logo-primary {
+.logo-primary {
     display: block;
     width: 600px; 
     height: auto;
@@ -55,24 +54,40 @@
     margin-top: 1em;
 }
 
-#choose-divetype {
-    height: 100vh;
+#stay {
+    height: 20vh;
+    background-color: rgba(15,49,71,1);
+}
+
+#choose-divetype, #diving-avatar {
+    height: 80vh;
+    width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
     margin: 0;
     padding: 2rem;
 }
 
-#logo-secondary {
+
+.logo-secondary {
     display: block;
     width: 150px;
-    margin: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
 }
 
 h5 {
+    display: flex;
+    width: 200px;
+    justify-content: center;
     font-size: 16px;
     font-family: "Bungee", "Open Sans";
     color: white;
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
+#process-bar {
+    display: flex;
+    margin: 2em 10em 0 10em;
+    justify-content: space-around;
 }
 
 h2 {
@@ -101,6 +116,7 @@ h4 {
 
 .info {
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     color: white;
     padding: 0.5rem;
@@ -109,7 +125,7 @@ h4 {
     text-align: justify;
 }
 
-#free {
+.card {
     grid-column: 2/ 3;
     grid-row: 1;
     background-image: url('https://i.postimg.cc/zv8TCn7X/temp-Image-Fqaj-Ez.avif');
@@ -120,17 +136,12 @@ h4 {
     font-size: 18px;
 }
 
-#scuba {
+.card:first-of-type {
     grid-column: 1/ 2;
     grid-row: 1;
     background-image: url('https://i.postimg.cc/gkpTmHrM/temp-Imageu-Dojwu.avif');
-    background-size: 150%;
-    background-repeat: no-repeat;
     background-position: bottom center;
-    height: 600px;
-    width: 400px;
     justify-self: right;
-    font-size: 18px;
 }
 
 a:link {
@@ -142,15 +153,59 @@ a:hover {
     transition: opacity 0.2s ease-in-out;
 }
 
-.choice {
+#scuba-btn, #free-btn {
     font-family: "Open Sans";
     font-weight: bold;
     font-size: 20px;
-    background-color: #9FB5C6;
+    background-color: transparent;
+    border: transparent;
     color: white;
-    border-radius: 5px;
-    padding: 0.5em 1em;
     margin: 5em auto auto auto;
     display: flex;
     justify-content: center;
+}
+
+#free-btn {
+    margin: 6.25em auto auto auto;
+    color: black;
+}
+
+.customize {
+    grid-column: 1/ 2;
+    justify-self: right;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    gap: 1rem;
+    background-color: gray;
+    color: white;
+    width: 500px;
+    height: 600px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.choice {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    margin: 0 auto 1rem auto ;
+}
+
+input[type="range"] {
+    width: 400px;
+    margin-top: 0;
+}
+
+label[for="skin-tone"], label[for="sex"] {
+    opacity: 100%;
+    margin: 8rem 2rem 1rem 2rem;
+    font-weight: bold;
+}
+
+.people {
+    display: flex;
+    grid-column: 2/ 3;
+    grid-row: 1;
 }
