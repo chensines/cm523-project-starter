@@ -60,6 +60,16 @@ body, html {
     padding: 0.5em 1em;
     margin-top: 1em;
 }
+a:link {
+    text-decoration: none;
+    color: white;
+    opacity: 20%;
+}
+
+#stay, .container {
+    display: none; 
+  }
+  
 
 #stay {
     height: 20vh;
@@ -71,7 +81,7 @@ body, html {
     width: 100%;
     background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
     padding: 1rem 0rem 1rem 0rem;
-}
+} 
 
 
 .logo-secondary {
@@ -150,9 +160,7 @@ h4 {
     justify-self: right;
 }
 
-a:link {
-    opacity: 20%;
-}
+
 
 a:hover {
     opacity: 1;
@@ -169,6 +177,8 @@ a:hover {
     margin: 5em auto auto auto;
     display: flex;
     justify-content: center;
+    cursor: pointer; /* Make sure the cursor indicates that it's clickable */
+    pointer-events: auto; 
 }
 
 #free-btn {
