@@ -74,7 +74,7 @@ a:link {
 }
 
 #stay {
-  height: 20vh;
+  height: 15vh;
   background-color: rgba(15,49,71,1);
 }
 
@@ -88,7 +88,7 @@ a:link {
 .logo-secondary {
   display: flex;
   width: 100px;
-  padding: 2em 3em 0 3em;
+  padding: 1em 3em 0 3em;
 }
 
 h5 {
@@ -100,11 +100,6 @@ h5 {
   color: white;
 }
 
-#process-bar {
-  display: flex;
-  margin: 2em 10em 0 10em;
-  justify-content: space-around;
-}
 
 h2 {
   color: white;
@@ -112,7 +107,7 @@ h2 {
   font-family: 'Bungee', 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
-  margin: 4rem auto;
+  margin: 2rem auto;
 }
 
 h4 {
@@ -130,7 +125,7 @@ p {
   display: block;
 }
 
-.nested-content:first-of-type {
+.nested-content {
   display: grid;
   gap: 15px;
   grid-template-columns: 1fr 1fr;
@@ -171,4 +166,70 @@ p {
 #scuba-btn {
   background-image: url(/images/scubadiver.png);
   justify-self: right;
+}
+
+
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30% 33% 36%;
+  width: 1000px;
+  gap: 10px;
+}
+
+ul img {
+  display: flex;
+  margin: 0 auto 1em auto;
+}
+
+ul p {
+  color: white;
+  display: flex;
+  width: 35ch;
+  margin: auto;
+}
+
+h6 {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin: auto;
+}
+
+.shortFins > img {
+  height: 100px;
+  padding: 10px;
+}
+
+.bcd >img {
+  width: 120px;
+  padding: 10px;
+}
+
+.mask >img {
+  width: 150px;
+  padding: 10px;
+}
+
+.snorkel > img {
+  width: 170px;
+}
+
+.booties > img {
+  width: 170px;
+}
+
+.surface > img {
+  width: 200px;
+}
+
+.weight > img {
+  height: 120px;
+  padding: 10px;
+}
+
+.regulator > img {
+  width: 120px;
+  padding: 10px;
 }

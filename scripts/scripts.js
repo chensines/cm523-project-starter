@@ -11,18 +11,20 @@ $(document).ready(function () {
                   infinite: false,      
                   speed: 500,             
                   slidesToShow: 1,         
-                  slidesToScroll: 1,
-                  cssEase: 'linear'   
+                  slidesToScroll: 1,  
                 });
                 $('#scuba-btn').on('click', function () {
                   $('.slick-slider').slick('slickGoTo', 1);
-                });
+                });  
                 $('#free-btn').on('click', function () {
-                  $('.slick-slider').slick('slickGoTo', 1);
-                });
-              });
+                  //$('.slick-slider .container:nth-of-type(2').hide ();
+                  $('.slick-slider').slick('slickGoTo', 2);
+              })   
+            });
         });
       });
     });
   });
-  
+
+
+
