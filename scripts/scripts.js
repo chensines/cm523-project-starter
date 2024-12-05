@@ -19,12 +19,16 @@ $(document).ready(function () {
                 $('#free-btn').on('click', function () {
                   //$('.slick-slider .container:nth-of-type(2').hide ();
                   $('.slick-slider').slick('slickGoTo', 2);
-              })   
+              }) 
+                $('#prevBtn1').on('click', function () {
+                  $('.slick-slider').slick('slickGoTo',0);
+                })
+                $('#nextBtn1').on('click', function () {
+                  $('.slick-slider').slick('slickGoTo',3);
+                })
             });
         });
       });
     });
   });
-
-
 

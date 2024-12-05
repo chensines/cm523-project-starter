@@ -23,8 +23,16 @@ body, html {
   justify-content: center;
 }
 
-h1, h2, h4, h5, h6, button {
+h1, h2, h4, h5, h6, p, button {
   color: white;
+}
+
+h1, h2, h5 {
+  font-family: 'Bungee', 'Open Sans', sans-serif;
+}
+
+h4, h6, p, button {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #welcome-page {
@@ -48,13 +56,11 @@ h1, h2, h4, h5, h6, button {
 
 #welcome-page > h1 {
   font-size: 100px;
-  font-family: "Bungee", "Open Sans";
   margin-top: 1em;
   text-shadow: 5px 5px 10px black;
 }
 
 #start-btn {
-  font-family: "Open Sans";
   font-weight: bold;
   font-size: 24px;
   background-color: #1F396F;
@@ -96,28 +102,23 @@ h5 {
   width: 180px;
   justify-content: center;
   font-size: 14px;
-  font-family: "Bungee", "Open Sans";
   margin-top: 0.5em;
 }
 
 h2 {
   font-size: 48px;
-  font-family: 'Bungee', 'Open Sans', sans-serif;
   display: flex;
   justify-content: center;
   margin: 2rem auto;
 }
 
 h4 {
-  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   margin: 1em;
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-
 }
 
 .container .slick-slide .nested-content > * {
@@ -145,12 +146,12 @@ p {
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin-top: 7em;
 }
 
 #free-btn p, #scuba-btn p {
   max-width: 50%;
   margin: 2em;
-  color: white;
 }
 
 #free-btn > h4, #free-btn > p {
@@ -180,23 +181,21 @@ ul img {
   margin: 0 auto 1em auto;
 }
 
-//*input[type="checkbox"] {
+/*input[type="checkbox"] {
   width: 0; 
   height: 0; 
   opacity: 0; 
-}*//
+}*/
 
-
-label > div > p {
+label p {
   display: flex;
   width: 30ch;
-  margin-bottom: 0;
+  justify-content: center;
   text-align: center;
-  color: white;
+  margin: 0.5em auto 0 auto;
 }
 
 h6 {
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   margin: auto;
   text-align: center;
@@ -212,11 +211,14 @@ label[for="bcd-checkbox"] img {
   padding: 10px;
 }
 
-label[for="mask-checkbox"] img {
+label[for="mask-checkbox"] img, label[for="diveComputer-checkbox"] img, label[for="regulator-checkbox"] img {
   width: 150px;
   padding: 10px;
 }
 
+label[for="mask-checkbox"] img {
+  margin: 1em auto 0 auto;
+}
 label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img  {
   width: 170px;
   margin-top: 1em;
@@ -225,10 +227,12 @@ label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img  {
 label[for="surface-checkbox"] img {
   width: 250px;
   padding: 10px;
+  margin: 1em auto auto auto;
 }
 
-label[for="weight-checkbox"] img, label[for="regulator-checkbox"] img {
+label[for="weight-checkbox"] img {
   height: 120px;
   padding: 10px;
 }
+
 
