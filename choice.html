@@ -18,6 +18,10 @@
     <!--slick CSS-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
     <script src="scripts/scripts.js" defer></script>
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   </head>
   <body>
     <!-- YOUR HTML GOES HERE -->
@@ -34,37 +38,142 @@
       <h1>Let's Dive Together</h1>
       <button id="start-btn">Start</button>
     </div>
-    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
-    <div id="stay">
-      <div>
-        <img class="logo-secondary" src="images/logo-secondary.png" alt="logo of the website">
-        <h5>Let's Dive Together</h5>
+    <div class="main">
+      <div id="stay">
+        <div>
+          <img class="logo-secondary" src="images/logo-secondary.png" alt="logo of the website">
+          <h5>Let's Dive Together</h5>
+        </div>
+        <div id="process-bar">
+          <button>.</button>
+          <button>.</button>
+          <button>.</button>
+          <button>.</button>
+        </div>
       </div>
-      <div id="process-bar">
-        <button>.</button>
-        <button>.</button>
-        <button>.</button>
-        <button>.</button>
+      <div class="slick-slider">
+        <!-- First Slide -->
+        <div class="container">
+          <h2>Choose Your Dive Type</h2>
+          <div class="nested-content">
+            <button id="scuba-btn">
+              <h4>Scuba Diving</h4> 
+              <p>Scuba diving is a water sport that involves breathing air from a tank while underwater.Most scuba divers are recreational divers who explore underwater environments such as lakes, rivers, quarries, kelp forests and coral reefs.</p>
+            </button>
+            <button id="free-btn">
+              <h4>Freediving</h4> 
+              <p>Freediving is the practice of holding your breath when diving underwater without the use of breathing equipment, such as a scuba tank. Freediving is a way of life for some, a competitive sport for others, and a hobby for many.</p>
+            </button>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="container">
+          <h2>Customize Your Avatar</h2>
+          <div class="nested-content">
+            <label for="sex">Sex</label>
+            <ul class="slide">
+              <label><input type="radio" name="sex" value="male"> Male</label>
+              <label><input type="radio" name="sex" value="female"> Female</label>
+              <label><input type="radio" name="sex" value="non-binary"> Non-Binary</label>
+            </ul>
+          </div>
+          <div class="nested-content">
+            <label for="skin-tone">Skin Tone</label>
+            <ul class="slide">
+              <input type="range" min="1" max="100">
+            </ul>
+          </div>
+        </div>
+        <!-- Third Slide -->
+        <div class="container">
+          <h2>Choose Your Equipment</h2>
+          <div class="nested-content">
+            <div class="shortFins">
+              <h6>Short Fins</h6>
+              <img src="images/shortFins1.png" alt="Short fins for scuba divers">
+              <p></p>
+            </div>
+            <div class="bcd">
+              <h6>Buoyancy Control Device (BCD)</h6>
+              <img src="images/bcd.png" alt="scuba diving backpack">
+              <p></p>
+            </div>
+            <div class="mask">
+              <h6>Diving Mask</h6>
+              <img src="images/mask.png" alt="diving goggles with blue frame">
+              <p></p>
+            </div>
+            <div class="snorkel">
+              <h6>Snorkel</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div class="booties">
+              <h6>Booties</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div class="knife">
+              <h6>Surface Marker Buoy</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div class="sweight">
+              <h6>Dive Weight</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div class="regulator">
+              <h6>Regulator</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div class="diveComputer">
+              <h6>Dive Computer</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+          </div>
+          <div class="nested-content">
+            <div class="longFins">
+              <img src="images/longFin.png" alt="Long fins for freedivers">
+              <h6>Long Fins</h6>
+              <p></p>
+            </div>
+            <div class="mask2">
+              <img src="" alt="Mask for freedivers">
+              <h6>Mask</h6>
+              <p></p>
+            </div>
+            <div class="sweight">
+              <h6>Dive Weight</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <div class="snorkel">
+              <h6>Snorkel</h6>
+              <img src="" alt="">
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <!-- Forth Slide -->
+        <div class="container">
+          <h2>Ready?</h2>
+          <div class="nested-content">
+            <h4>Movement Control</h4>
+            <button><a href="">Dive</a></button>
+            <button><a href="">Back</a></button>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <h2>Choose Your Dive Type</h2>
+    <div class="stimulation">
+
     </div>
-    <div class="container">
-      <h2>Customize Your Avatar</h2>
-    </div>
-    <div class="container">
-      <h2>Select Your Gear</h2>
-    </div>
-    <div class="container">
-      <h2>Ready?</h2>
-    </div>
+    
   </body>
 </html>
 
-    <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
-    <!-- Slick JS -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script type="text/javascript">
-  $('.container').slick(); </script>
+    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+  
