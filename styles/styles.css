@@ -54,7 +54,7 @@ h4, h6, p, button {
   margin-top: 2rem;
 }
 
-#welcome-page > h1 {
+h1 {
   font-size: 100px;
   margin-top: 1em;
   text-shadow: 5px 5px 10px black;
@@ -83,6 +83,11 @@ a:link {
 #stay {
   height: 10vh;
   background-color: rgba(15,49,71,1);
+  display: flex;
+}
+
+nav {
+  
 }
 
 .container {
