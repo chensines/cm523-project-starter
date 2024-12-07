@@ -73,6 +73,7 @@ a:link {
   text-decoration: none;
 }
 
+
 .main {
   height: 100vh;
   width: 100%;
@@ -87,7 +88,24 @@ a:link {
 }
 
 nav {
-  
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  align-items: center;
+  margin: 0 2em 0 auto;
+}
+
+nav li {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+}
+
+li a:link {
+  color: white;
+}
+
+li a:visited {
+  color: beige;
 }
 
 .container {
