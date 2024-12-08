@@ -421,9 +421,55 @@ label[for="longFins-checkbox"] img {
   margin-top: 1em;
 }
 
+#freemask-display img {
+  width: 25%;
+}
+
+#freemask-display {
+  position: absolute;
+  top: 15vh;
+  left: 53.45%;
+  z-index: 3;
+}
 
 #longFins-display img {
+  width: 100%;
+}
+
+#longFins-display {
   position: absolute;
-  top: 45vh;
-  right: 4px;
+  top: 47vh;
+  left: 53.7%;
+  z-index: 1;
+}
+
+#freesnorkel-display img {
+  width: 21%;
+  transform: rotate(-90deg);
+}
+
+#freesnorkel-display {
+  position: absolute;
+  top: 15vh;
+  left: 50.65%;
+  z-index: 3;
+}
+
+#freeweight-display img {
+  width: 10%;
+  transform: rotate(90deg);
+}
+
+#freeweight-display {
+  position: absolute;
+  top: 42vh;
+  left: 53.25%;
+  z-index: 3;
+}
+
+#freediveComputer-display {
+  position: absolute;
+  top: 42vh;
+  left: 57%;
+  z-index: 3;
 }

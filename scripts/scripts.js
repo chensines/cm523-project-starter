@@ -32,19 +32,33 @@ $(document).ready(function () {
 
         $('#nextBtn1').on('click', function () {
           nextButtonClicked = 1; 
-          if ('input[type="checkbox"]checked == true') {
+
+          const currentPageCheckboxes = $('#currentPage input[type="checkbox"]');
+          const allChecked = currentPageCheckboxes.length === currentPageCheckboxes.filter(':checked').length;
+        
+          if (allChecked) {
             $('.slick-slider').slick('slickGoTo', 3);
+          } else {
+            alert('Choose all the equipment you need!');
           }
         });
 
         $('#prevBtn2').on('click', function () {
           $('.slick-slider').slick('slickGoTo', 0);
-          $('input[type="checkbox"]').uncheck;
+          $('input[type="checkbox"]').prop('checked', false);
         });
         
         $('#nextBtn2').on('click', function () {
-          nextButtonClicked = 2;
-          $('.slick-slider').slick('slickGoTo', 3);
+          nextButtonClicked = 2; 
+          
+          const currentPageCheckboxes = $('#currentPage input[type="checkbox"]');
+          const allChecked = currentPageCheckboxes.length === currentPageCheckboxes.filter(':checked').length;
+        
+          if (allChecked) {
+            $('.slick-slider').slick('slickGoTo', 3);
+          } else {
+            alert('Choose all the equipment you need!');
+          }
         });
 
         $('#prevBtn3').on('click', function () {
