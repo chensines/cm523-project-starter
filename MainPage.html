@@ -60,12 +60,12 @@
           </div>
         </div>
         <!-- Second Slide -->
-        <div class="container">
+        <div class="container" style="display: grid; width: 100%;">
           <div class="control">
             <button id="prevBtn1">Back</button>
             <h2>Choose Your Equipment</h2>
             <button id="nextBtn1">Next</button>
-        </div>
+          </div>
           <ul class="slider-list">
             <label for="shortFins-checkbox">
               <div>
@@ -75,12 +75,6 @@
                 <img src="images/shortFins1.png" alt="Short fins for scuba divers">
               </div>
             </label>
-            <!--<div class="bcd">
-              <input type="checkbox" >
-              <h6>Buoyancy Control Device (BCD)</h6>
-              <p>Controls buoyancy by inflating or deflating during scuba dives.</p>
-              <img src="images/bcd.png" alt="scuba diving backpack">
-            </div>-->
             <label for="bcd-checkbox">
               <div>
                 <input type="checkbox" id="bcd-checkbox">
@@ -89,6 +83,9 @@
                 <img src="images/bcd.png" alt="scuba diving backpack">
               </div>
             </label>
+            <div id="bcd-display" style="display: none">
+              <img src="images/bcd.png" alt="scuba diving backpack">
+            </div>
             <label for="booties-checkbox">
               <div>
                 <input type="checkbox" id="booties-checkbox">
@@ -146,6 +143,10 @@
               </div>
             </label>
           </ul>
+          <div class="avatar">
+            <h4>Avatar</h4>
+            <img src="images/avatar.png" alt="A man in a wetsuit">
+          </div>
         </div>
         <div class="container">
           <div class="control">
@@ -178,14 +179,20 @@
         </div>
         <!-- Forth Slide -->
         <div class="container">
-          <h2>Ready?</h2>
-          <div class="nested-content">
+          <div class="control">
+            <button id="prevBtn3">Back</button>
+            <h2>Ready?</h2>
+            <button id="nextBtn3">Dive</button>
+          </div>
+          <div class="slick-slide">
             <h4>Movement Control</h4>
           </div>
         </div>
+        <!-- Fifth Slide -->
+        <div class="container">
+          <h2>stimulation</h2>
+        </div>
       </div>
-    </div>
-    <div class="stimulation">
     </div>
   </body>
 </html>

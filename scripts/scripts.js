@@ -1,57 +1,74 @@
-/* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
+let nextButtonClicked = null;
+const avatar = document.getElementsByClassName('avatar');
 
 $(document).ready(function () {
-    $('.main').hide();
-    $('#start-btn').on('click', function () {
-      $('#welcome-page').fadeOut(500, function () {
-        $('.main').fadeIn(500, function () {
-            $(document).ready(function () {
-                $('.slick-slider').slick({
-                  dots: true,
-                  infinite: false,      
-                  speed: 500,             
-                  slidesToShow: 1,         
-                  slidesToScroll: 1,  
-                });
-                $('#scuba-btn').on('click', function () {
-                  $('.slick-slider').slick('slickGoTo', 1);
-                });  
-                $('#free-btn').on('click', function () {
-                  //$('.slick-slider .container:nth-of-type(2').hide ();
-                  $('.slick-slider').slick('slickGoTo', 2);
-              }) 
-                $('#prevBtn1').on('click', function () {
-                  $('.slick-slider').slick('slickGoTo',0);
-                })
-                $('#nextBtn1').on('click', function () {
-                  $('.slick-slider').slick('slickGoTo',3);
-                })
-                $('#prevBtn2').on('click', function () {
-                  $('.slick-slider').slick('slickGoTo',0);
-                })
-                $('#nextBtn2').on('click', function () {
-                  $('.slick-slider').slick('slickGoTo',3);
-                })
-            });
+  $('.main').hide();
+  $('#start-btn').on('click', function () {
+    $('#welcome-page').fadeOut(500, function () {
+      $('.main').fadeIn(500, function () {
+        $('.slick-slider').slick({
+          dots: true,
+          infinite: false,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+
+        $('#scuba-btn').on('click', function () {
+          $('.slick-slider').slick('slickGoTo', 1);
+          avatar.style.display = "block";
+        });
+
+        $('#free-btn').on('click', function () {
+          $('.slick-slider').slick('slickGoTo', 2);
+          avatar.style.display = "block";
+        });
+
+        $('#prevBtn1').on('click', function () {
+          $('.slick-slider').slick('slickGoTo', 0);
+        });
+
+        $('#nextBtn1').on('click', function () {
+          nextButtonClicked = 1; 
+          $('.slick-slider').slick('slickGoTo', 3); 
+        });
+
+        $('#prevBtn2').on('click', function () {
+          $('.slick-slider').slick('slickGoTo', 0);
+        });
+        
+        $('#nextBtn2').on('click', function () {
+          nextButtonClicked = 2;
+          $('.slick-slider').slick('slickGoTo', 3);
+        });
+
+        $('#prevBtn3').on('click', function () {
+          if (nextButtonClicked === 1) {
+            $('.slick-slider').slick('slickGoTo', 1);
+          } else if (nextButtonClicked === 2) {
+            $('.slick-slider').slick('slickGoTo', 2);
+          }
+        });
+
+        $('#nextBtn3').on('click', function () {
+          $('.slick-slider').slick('slickGoTo', 4);
         });
       });
     });
   });
-  
-  
-    // 监听 Slider 1 的跳转
-    $('.container:first-of-type').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-      if (nextSlide === 2) { // 如果目标是跳到页面 3
-        $('.container:nth-of-type(2)').hide(); // 隐藏页面 2
-        $('.container:last-of-type').show(); // 显示页面 3
-      } else {
-        $('.container:nth-of-type(2)').show(); // 如果不是，恢复页面 2 的可见性
-      }
-    });
-  
-    // 如果需要直接在页面加载时隐藏某些 Slider
-    $('.container:nth-of-type(2)').hide();
-  
+});
 
-    console.log('Event triggered!');
-console.log($('.container:nth-of-type(2)')); // 验证选择器
+const bcdCheckbox = document.getElementById('bcd-checkbox');
+const bcdDisplay = document.getElementById('bcd-display');
+
+
+// Add an event listener to the checkbox to toggle visibility
+bcdCheckbox.addEventListener('change', function () {
+  if (bcdCheckbox.checked) {
+    // If the checkbox is checked, show the element
+    bcdDisplay.style.display = 'block';
+  } else {
+    // If the checkbox is unchecked, hide the element
+    bcdDisplay.style.display = 'none';
+  }
+});
