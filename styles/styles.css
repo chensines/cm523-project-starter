@@ -112,7 +112,7 @@ li a:hover {
 /* 第二個 .container 表現為 flex */
 .container:nth-of-type(2) {
   width: 100%;
-  display: grid;
+  display: grid !important;
   grid-template-columns: 70% 30%;
   grid-template-rows: 100px auto;
 }
@@ -152,8 +152,6 @@ h2 {
 .control {
   display: flex;
   justify-content: center;
-  grid-column: 1/ 3;
-  grid-row: 1/ 1;
 }
 
 h4 {
@@ -213,12 +211,16 @@ ul img {
   margin: 0 auto 1em auto;
 }
 
-.slider-list {
+.slider-list-1, .slider-list-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 30% 25% 30%;
-  width: 1000px;
+  width: 100%;
   gap: 10px;
+}
+
+.slider-list-2 {
+  margin: auto 2em auto 2em;
 }
 
 /*input[type="checkbox"] {
@@ -256,28 +258,80 @@ label[for="bcd-checkbox"] img {
   padding: 10px;
 }
 
-
 #bcd-display > img {
-  width: 200px;
+  width: 95%;
 }
 
 #bcd-display {
   position: absolute;
-  top: 20vh;
-  left: 35%;
+  top: 23vh;
+  left: 34.3%;
+  z-index: 3;
 }
 
-label[for="mask-checkbox"] img, label[for="diveComputer-checkbox"] img, label[for="regulator-checkbox"] img {
+#booties-display {
+  position: absolute;
+  top: 75vh;
+  left: 34.1%;
+  z-index: 3;
+}
+
+#booties-display > img {
+  width: 92%;
+}
+
+label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img, label[for="diveComputer-checkbox"] img, label[for="freediveComputer-checkbox"] img , label[for="regulator-checkbox"] img {
   width: 150px;
   padding: 10px;
 }
 
-label[for="mask-checkbox"] img {
+label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
   margin: 1em auto 0 auto;
 }
-label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img  {
+
+.mask {
+  grid-column: 1/ 2;
+  grid-row: 2/ 3;
+}
+
+#mask-display > img {
+  width: 26%;
+}
+
+#mask-display {
+  position: absolute;
+  top: 15.5vh;
+  left: 33.98%;
+  z-index: 3;
+}
+
+#shortFins-display > img {
+  width: 26%;
+}
+
+#shortFins-display {
+  position: absolute;
+  top: 55.5vh;
+  left: 30%;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img, label[for="freesnorkel-checkbox"] img  {
   width: 170px;
   margin-top: 1em;
+}
+
+#snorkel-display > img {
+  width: 18%;
+  transform: rotate(-90deg);
+}
+
+#snorkel-display {
+  position: absolute;
+  top: 15.5vh;
+  left: 31.25%;
+  z-index: 3;
 }
 
 label[for="surface-checkbox"] img {
@@ -286,16 +340,90 @@ label[for="surface-checkbox"] img {
   margin: 1em auto auto auto;
 }
 
-label[for="weight-checkbox"] img {
+label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   height: 120px;
   padding: 10px;
 }
 
-.avatar {
+
+#regulator-display > img {
+  width: 10%;
+}
+
+#regulator-display {
+  position: absolute;
+  top: 18vh;
+  left: 30.6%;
+  z-index: 3;
+}
+
+#weight-display > img{
+  width: 10%;
+  transform: rotate(90deg);
+}
+
+#weight-display {
+  position: absolute;
+  top: 45vh;
+  left: 34%;
+  z-index: 3;
+}
+
+#surface-display > img {
+  width: 25%;
+  transform: rotate(90deg);
+}
+
+#surface-display {
+  position: absolute;
+  top: 25vh;
+  left: 31%;
+  z-index: 1;
+}
+
+#diveComputer-display > img {
+  width: 120%;
+}
+
+#diveComputer-display {
+  position: absolute;
+  top: 42vh;
+  left: 37.5%;
+  z-index: 3;
+}
+.slider-list-1 .avatar {
   display: flex;
-  grid-column: 2/ 3;
+  grid-column: 4/ 5;
+  grid-row: 1/ 4;
+}
+
+.slider-list-2 .avatar {
+  display: flex;
+  grid-column: 4/ 5;
+  grid-row: 1/ 4;
 }
 
 .avatar > img {
-  width: 70%;
+  width: 50%;
+  margin-left: 0;
+  z-index: 2;
+  margin-left: 10em;
+}
+
+.slider-list-2 > .avatar > img {
+  width: 50%;
+  margin-left: 0;
+  z-index: 2;
+  margin-left: 5em;
+}
+
+label[for="longFins-checkbox"] img {
+  margin-top: 1em;
+}
+
+
+#longFins-display img {
+  position: absolute;
+  top: 45vh;
+  right: 4px;
 }
