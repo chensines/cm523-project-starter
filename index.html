@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>Let's Dive Together</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="a webpage to introduce the difference between free diving and scuba diving" />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <!--slick CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+    <script src="scripts/scripts.js" defer></script>
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  </head>
+  <body>
+    <!-- YOUR HTML GOES HERE -->
+    <div id="welcome-page">
+      <img class="logo-primary" src="images/logo-primary.png" alt="a stingray with two divers">
+      <h1>Let's Dive Together</h1>
+      <button id="start-btn">Start</button>
+    </div>
+    <div class="main">
+      <div id="stay">
+        <div class="home">
+          <a href="MainPage.html"><img class="logo-secondary" src="images/logo-secondary.png" alt="logo of the website"></a>
+          <h5>Let's Dive Together</h5>
+        </div>
+        <nav>
+            <li><a href="Design Elements.html">Elements</a></li>
+            <li><a href="wireframe.html">Wireframe</a></li>
+            <li><a href="Source.html">Source Reference</a></li>
+            <li><a href="UX Report.html">UX Report</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slick-slider">
+        <!-- First Slide -->
+        <div class="container">
+            <h2>Choose Your Dive Type</h2>
+          <div class="nested-content">
+            <button id="scuba-btn">
+              <h4>Scuba Diving</h4> 
+              <p>Scuba diving is a water sport that involves breathing air from a tank while underwater.Most scuba divers are recreational divers who explore underwater environments such as lakes, rivers, quarries, kelp forests and coral reefs.</p>
+            </button>
+            <button id="free-btn">
+              <h4>Freediving</h4> 
+              <p>Freediving is the practice of holding your breath when diving underwater without the use of breathing equipment, such as a scuba tank. Freediving is a way of life for some, a competitive sport for others, and a hobby for many.</p>
+            </button>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="container">
+          <div class="control">
+            <button id="prevBtn1">Back</button>
+            <h2>Gear Up!</h2>
+            <button id="nextBtn1">Next</button>
+          </div>
+          <ul class="slider-list-1">
+            <label for="shortFins-checkbox">
+              <div>
+                <input type="checkbox" id="shortFins-checkbox">
+                <h6>Short Fins</h6>
+                <p>Often made with durable plastic for powerful, efficient kicks.</p>
+                <img src="images/shortFins1.png" alt="Short fins for scuba divers">
+              </div>
+            </label>
+            <div id="shortFins-display" style="display: none">
+              <img src="images/shortFins1.png" alt="Short fins for scuba divers">
+            </div>
+            <label for="bcd-checkbox">
+              <div>
+                <input type="checkbox" id="bcd-checkbox">
+                <h6>Buoyancy Control Device (BCD)</h6>
+                <p>Controls buoyancy by inflating or deflating during scuba dives.</p>
+                <img src="images/bcd.png" alt="scuba diving backpack">
+              </div>
+            </label>
+            <div id="bcd-display" style="display: none">
+              <img src="images/bcd1.png" alt="scuba diving backpack">
+            </div>
+            <label for="booties-checkbox">
+              <div>
+                <input type="checkbox" id="booties-checkbox">
+                <h6>Booties</h6>
+                <p>Protect feet, provide warmth, and fit comfortably inside dive boots.</p>
+                <img src="images/booties.webp" alt="black heavy booties">
+              </div>
+            </label>
+            <div id="booties-display" style="display: none">
+              <img src="images/booties1.png" alt="black heavy black shoes made with wetsuit-materials">
+            </div>
+            <div class="avatar">
+              <img src="images/avatar.png" alt="A man in a wetsuit">
+            </div>
+            <label for="mask-checkbox">
+              <div>
+                <input type="checkbox" id="mask-checkbox">
+                <h6>Diving Mask</h6>
+                <p>Allows underwater divers to see clearly underwater</p>
+                <img src="images/mask.png" alt="diving goggles with blue frame">
+              </div>
+            </label>
+            <div id="mask-display" style="display: none">
+              <img src="images/mask.png" alt="diving goggles with blue frame">
+            </div>
+            <label for="snorkel-checkbox">
+              <div>
+                <input type="checkbox" id="snorkel-checkbox">
+                <h6>Snorkel</h6>
+                <p>Allow surface breathing, keeping the mouth above water while diving.</p>
+                <img src="images/snorkel.png" alt="yellow and black tube">
+              </div>
+            </label>
+            <div id="snorkel-display" style="display: none">
+              <img src="images/snorkel.png" alt="yellow and black tube">
+            </div>
+            <label for="surface-checkbox">
+              <div>
+                <input type="checkbox" id="surface-checkbox">
+                <h6>Surface Marker Buoy</h6>
+                <p>Signals a diver's location to surface.</p>
+                <img src="images/surface.png" alt="an orange stick filled with air">
+              </div>
+            </label>
+            <div id="surface-display" style="display: none">
+              <img src="images/surface.png" alt="an orange stick filled with air">
+            </div>
+            <label for="weight-checkbox">
+              <div>
+                <input type="checkbox" id="weight-checkbox">
+                <h6>Diving Weight</h6>
+                <p>Help divers achieve neutral buoyancy and control depth underwater.</p>
+                <img src="images/dive-weight .png" alt="a small brick of metal">
+              </div>
+            </label>
+            <div id="weight-display" style="display: none">
+              <img src="images/dive-weight .png" alt="a small brick of metal">
+            </div>
+            <label for="regulator-checkbox">
+              <div>
+                <input type="checkbox" id="regulator-checkbox">
+                <h6>Regulator</h6>
+                <p> Controlling airflow from the tank to the diver.</p>
+                <img src="images/pngegg.png" alt="a yellow air controller">
+              </div>
+            </label>
+            <div id="regulator-display" style="display: none">
+              <img src="images/pngegg.png" alt="a yellow air controller">
+            </div>
+            <label for="diveComputer-checkbox">
+              <div>
+                <input type="checkbox" id="diveComputer-checkbox">
+                <h6>Diving Computer</h6>
+                <p>Tracks depth, time, and no-decompression limits during dives.</p>
+                <img src="images/peregrine1.webp" alt="a watch that can operate underwater">
+              </div>
+            </label>
+            <div id="diveComputer-display" style="display: none">
+              <img src="images/watch1.png" alt="a watch that can operate underwater">            
+            </div>
+          </ul>
+        </div>
+        <div class="container">
+          <div class="control">
+            <button id="prevBtn2">Back</button>
+            <h2>Choose Your Equipment</h2>
+            <button id="nextBtn2">Next</button>
+          </div>
+          <ul class="slider-list-2">
+            <label for="freemask-checkbox">
+              <div>
+                <input type="checkbox" id="freemask-checkbox">
+                <h6>Diving Mask</h6>
+                <p>Allows underwater divers to see clearly underwater</p>
+                <img src="images/mask.png" alt="diving goggles with blue frame">
+              </div>
+            </label>
+            <div id="freemask-display" style="display: none">
+              <img src="images/mask.png" alt="diving goggles with blue frame">
+            </div>
+            <label for="freesnorkel-checkbox">
+              <div>
+                <input type="checkbox" id="freesnorkel-checkbox">
+                <h6>Snorkel</h6>
+                <p>Allow surface breathing, keeping the mouth above water while diving.</p>
+                <img src="images/snorkel.png" alt="yellow and black tube">
+              </div>
+            </label>
+            <div id="freesnorkel-display" style="display: none">
+              <img src="images/snorkel.png" alt="yellow and black tube">
+            </div>
+            <div class="avatar">
+              <img src="images/avatar.png" alt="A man in a wetsuit">
+            </div>
+            <label for="longFins-checkbox">
+              <div>
+                <input type="checkbox" id="longFins-checkbox">
+                <h6>Long Fins</h6>
+                <p>Often made with durable plastic for powerful, efficient kicks.</p>
+                <img src="images/longFins.png" alt="Longer fins provides better force">
+              </div>
+            </label>
+            <div id="longFins-display" style="display: none">
+              <img src="images/longFins.png" alt="Longer fins provides better force">
+            </div>
+            <label for="freediveComputer-checkbox">
+              <div>
+                <input type="checkbox" id="freediveComputer-checkbox">
+                <h6>Dive Computer</h6>
+                <p>Tracks depth, time, and no-decompression limits during dives.</p>
+                <img src="images/peregrine1.webp" alt="a watch that can operate underwater">
+              </div>
+            </label>
+            <div id="freediveComputer-display" style="display: none">
+              <img src="images/watch1.png" alt="a watch that can operate underwater">            
+            </div>
+            <label for="freeweight-checkbox">
+              <div>
+                <input type="checkbox" id="freeweight-checkbox">
+                <h6>Dive Weight</h6>
+                <p>Help divers achieve neutral buoyancy and control depth underwater.</p>
+                <img src="images/dive-weight .png" alt="a small brick of metal">
+              </div>
+            </label>
+            <div id="freeweight-display" style="display: none">
+              <img src="images/dive-weight .png" alt="a small brick of metal">
+            </div>
+          </ul>
+        </div>
+        <!-- Forth Slide -->
+        <div class="container">
+          <div class="control">
+            <button id="prevBtn3">Back</button>
+            <h2>Ready?</h2>
+            <button id="nextBtn3">Dive</button>
+          </div>
+          <div class="slick-slide">
+            <h4>Movement Control</h4>
+          </div>
+        </div>
+        <!-- Fifth Slide -->
+        <div class="container">
+          <h2>stimulation</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+  
