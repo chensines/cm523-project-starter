@@ -37,13 +37,15 @@
           <h5>Let's Dive Together</h5>
         </div>
         <nav>
-            <li><a href="Design Elements.html">Elements</a></li>
+          <ul>
+            <li><a href="Design Elements.html">Profolio</a></li>
             <li><a href="wireframe.html">Wireframe</a></li>
-            <li><a href="Source.html">Source Reference</a></li>
-            <li><a href="UX Report.html">UX Report</a></li>
+            <li><a href="Source.html">Design Elements</a></li>
+            <li><a href="UX Report.html">User Report</a></li>
           </ul>
         </nav>
       </div>
+      <canvas id="oceanCanvas" width="800" height="600"></canvas>
       <div class="slick-slider">
         <!-- First Slide -->
         <div class="container">
@@ -239,19 +241,23 @@
           </ul>
         </div>
         <!-- Forth Slide -->
-        <div class="container">
+        <div id="info" class="container">
           <div class="control">
             <button id="prevBtn3">Back</button>
             <h2>Ready?</h2>
-            <button id="nextBtn3">Dive</button>
           </div>
-          <div class="slick-slide">
-            <h4>Movement Control</h4>
+          <div class="slider-list-3">
+              <p>Each descent lasts 30 seconds, reaching a maximum depth of 30 meters. Divers must equalize ear pressure during the descent process.</p>
+              <figure>
+                <img src="images/movement.png" alt="case pic for up down left right">
+                <figcaption>Use Your Keyboard to Control the Movement of the Diver</figcaption>
+              </figure>
+              <figure>
+                <img src="images/SPACE.png" alt="space case">
+                <figcaption>Space for Releasing Air Pressure</figcaption>
+              </figure>
+              <button id="dive">Dive</button>
           </div>
-        </div>
-        <!-- Fifth Slide -->
-        <div class="container">
-          <h2>stimulation</h2>
         </div>
       </div>
     </div>
