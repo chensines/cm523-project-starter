@@ -3,13 +3,12 @@ const alertCounter = {};
 
 $(document).ready(function () {
   $('.main').hide();
-  $('#oceanCanvas').hide();
 
-  // Start Button Click
   $('#start-btn').on('click', function () {
     $('#welcome-page').fadeOut(500, function () {
       $('.main').fadeIn(500);
       initializeSlider();
+      $('#simulation').hide();
     });
   });
 
@@ -22,11 +21,9 @@ $(document).ready(function () {
       slidesToScroll: 1,
     });
 
-    // Update current page on slide change
     $('.slick-slider').on('afterChange', function (event, slick, currentSlide) {
       currentPage = currentSlide;
 
-      // Show alert once per slide if equipment is not selected
       if ((currentPage === 1 || currentPage === 2) && !alertCounter[currentPage]) {
         alert('Choose all the equipment you need!');
         alertCounter[currentPage] = 1;
@@ -37,12 +34,10 @@ $(document).ready(function () {
   }
 
   function setupButtonHandlers() {
-    // Navigation Buttons
     $('#scuba-btn').on('click', () => $('.slick-slider').slick('slickGoTo', 1));
     $('#free-btn').on('click', () => $('.slick-slider').slick('slickGoTo', 2));
     $('#prevBtn1, #prevBtn2').on('click', () => $('.slick-slider').slick('slickGoTo', 0));
 
-    // Next Button Logic
     $('#nextBtn1, #nextBtn2').on('click', function () {
       const currentPageCheckboxes = $('.slick-active input[type="checkbox"]');
       const allChecked = currentPageCheckboxes.length === currentPageCheckboxes.filter(':checked').length;
@@ -54,7 +49,6 @@ $(document).ready(function () {
       }
     });
 
-    // Simulation Page
     $('#prevBtn3').on('click', function () {
       const previousPage = currentPage === 3 ? 1 : 2;
       $('.slick-slider').slick('slickGoTo', previousPage);
@@ -229,61 +223,71 @@ freediveComputerCheckbox.addEventListener('change', function () {
 }
 });
 
-let canvas = document.getElementById('oceanCanvas');
-    let ctx = canvas.getContext('2d');
+const scubaIcon = document.getElementById('scubaicon');
+const container = document.getElementById('simulation');
 
-    // 設置 canvas 的寬高
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+// Initial position
+let positionX = 600;
+let positionY = 200;
 
-    // 加載背景圖像
-    let oceanBackground = new Image();
-    oceanBackground.src = 'images/pngtree-deep-sea-plant-sea-water-cartoon-illustration-advertising-background-picture-image_2249598.jpg';
+const step = 20;
 
-    // 加載潛水員圖像
-    let diver = new Image();
-    diver.src = 'images/diver.png'; // 確保圖片存在
+let direction = 0;
 
-    // 初始潛水員位置
-    let diverPosition = { x: canvas.width / 2, y: canvas.height / 2 };
+function updatePosition() {
+    scubaIcon.style.left = `${positionX}px`;
+    scubaIcon.style.top = `${positionY}px`;
+    scubaIcon.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+}
 
-    // 背景圖大小
-    let backgroundWidth = 1200; // 根據實際圖片調整
-    let backgroundHeight = 2141;
+function updateAirPressure() {
 
-    // 監聽鍵盤事件
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'ArrowUp') {
-        diverPosition.y -= 10;
-      } else if (event.key === 'ArrowDown') {
-        diverPosition.y += 10;
-      } else if (event.key === 'ArrowLeft') {
-        diverPosition.x -= 10;
-      } else if (event.key === 'ArrowRight') {
-        diverPosition.x += 10;
-      }
-    });
+}
 
-    // 更新畫布
-    function updateCanvas() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空畫布
-
-      // 計算背景滾動位置
-      let backgroundX = Math.max(0, Math.min(diverPosition.x - canvas.width / 2, backgroundWidth - canvas.width));
-      let backgroundY = Math.max(0, Math.min(diverPosition.y - canvas.height / 2, backgroundHeight - canvas.height));
-
-      // 繪製背景
-      ctx.drawImage(oceanBackground, backgroundX, backgroundY, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-
-      // 繪製潛水員（固定在畫布中心）
-      ctx.drawImage(diver, canvas.width / 2 - 25, canvas.height / 2 - 25, 50, 50); // 潛水員尺寸為 50x50
-
-      requestAnimationFrame(updateCanvas); // 繼續動畫
+document.addEventListener('keydown', (event) => {
+    switch (event.key) {
+        case 'ArrowUp':
+            positionY = Math.max(0, positionY - step);
+            direction = -90;
+            break;
+        case 'ArrowDown':
+            positionY = Math.min(container.offsetHeight - scubaIcon.offsetHeight, positionY + step);
+            direction = 90;
+            break;
+        case 'ArrowLeft':
+            positionX = Math.max(0, positionX - step);
+            direction = 180; 
+            break;
+        case 'ArrowRight':
+            positionX = Math.min(container.offsetWidth - scubaIcon.offsetWidth, positionX + step);
+            direction = 0;
+            break;
+        default:
+            return;
     }
+    updatePosition();
+    updateBar()
+});
 
-    // 確保圖片加載完成後開始動畫
-    oceanBackground.onload = function () {
-      diver.onload = function () {
-        updateCanvas();
-      };
-    };
+
+updatePosition();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const countdownSeconds = 35;
+  let timeRemaining = countdownSeconds;
+
+  const timerBar = document.getElementById('timer-bar');
+  timerBar.style.width = '100%';
+
+  const interval = setInterval(() => {
+    timeRemaining--;
+    const widthPercentage = (timeRemaining / countdownSeconds) * 100;
+    timerBar.style.width = `${widthPercentage}%`;
+
+    if (timeRemaining <= 0) {
+      clearInterval(interval);
+      alert(`Time's Up!`);
+    }
+  }, 1000);
+});

@@ -45,7 +45,21 @@
           </ul>
         </nav>
       </div>
-      <canvas id="oceanCanvas" width="800" height="600"></canvas>
+      <div id="simulation">
+        <div id="timer">
+          <div id="timer-bar"></div>
+        </div>
+        <img id="scubaicon" src="images/diver.png" alt="Scuba Diver">
+        <img src="images/reef.png" alt="reef">
+        <img src="images/rock.png" alt="rock">
+        <img src="images/shipwreck.png" alt="shipwreck">
+        <div id="pressure">
+          <div id="pressure-bar"></div>
+        </div>
+        <div id="depth">
+          <div id="depth-bar"></div>
+        </div>
+      </div>
       <div class="slick-slider">
         <!-- First Slide -->
         <div class="container">
@@ -245,6 +259,7 @@
           <div class="control">
             <button id="prevBtn3">Back</button>
             <h2>Ready?</h2>
+            <button id="dive">Dive</button>
           </div>
           <div class="slider-list-3">
               <p>Each descent lasts 30 seconds, reaching a maximum depth of 30 meters. Divers must equalize ear pressure during the descent process.</p>
@@ -256,7 +271,6 @@
                 <img src="images/SPACE.png" alt="space case">
                 <figcaption>Space for Releasing Air Pressure</figcaption>
               </figure>
-              <button id="dive">Dive</button>
           </div>
         </div>
       </div>
