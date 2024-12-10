@@ -935,9 +935,16 @@ figure > div, #the-red > div {
     opacity: 0;
   }
 
+  [id*="instructions"] {
+    width: 200px;
+    height: 400px;
+    height: auto;
+  }
+
+
   [id*="instructions"] > p {
     line-height: 1.4;
-    font-size: 13;
+    font-size: 12px;
   }
 
   h3 {
