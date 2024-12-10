@@ -930,7 +930,7 @@ figure > div, #the-red > div {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-height: 80vh;
+    max-height: 100vh;
 }
 
 }
