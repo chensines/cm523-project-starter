@@ -442,6 +442,7 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   left: 31.45%;
   z-index: 2;
 }
+
 .slider-list-1 .avatar, .slider-list-2 .avatar {
   display: block;
   grid-column: 1/ 2;
@@ -902,7 +903,7 @@ figure > div, #the-red > div {
     height: 40px;
   }
 
-  .slider-list-1, .slider-list-2 {
+  .slider-list-1, .slider-list-2, .slider-list-3 {
     display: flex;
     flex-direction: column;
     max-height: 120vh;
@@ -934,7 +935,7 @@ figure > div, #the-red > div {
     left: 23%;
   }
 
-  #instructions-scuba > p, #instructions-free > p, #popup > p {
+  p {
     line-height: 1.4;
     font-size: 12px;
   }
@@ -943,4 +944,11 @@ figure > div, #the-red > div {
     font-size: 14px;
   }
 
+  figure {
+    width: 350px;
+  }
+
+  figure > img {
+    width: 55%;
+  }
 }
