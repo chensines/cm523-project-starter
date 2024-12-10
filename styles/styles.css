@@ -262,7 +262,7 @@ p {
 }
 
 .slider-list-1 img, .slider-list-2 img {
-  display: block;
+  display: flex;
   margin: 1em auto;
 }
 
@@ -273,10 +273,6 @@ p {
   width: 80%;
   gap: 10px;
   margin: auto;
-}
-
-.slider-list-2 {
-  margin: auto 2em auto 2em;
 }
 
 input[type="checkbox"] {
@@ -331,8 +327,8 @@ label[for="bcd-checkbox"] img {
 
 #booties-display {
   position: fixed;
-  top: calc(21vh + 5%); 
-  left: calc(27.5% + 5%);
+  top: 78vh;
+  left: 27.3%;
   z-index: 3;
 }
 
@@ -459,6 +455,9 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   background-repeat: no-repeat;
 }
 
+.slider-list-1 .avatar > img, .slider-list-2 .avatar > img {
+  display: none;
+} 
 
 label[for="longFins-checkbox"] img {
   margin-top: 1em;
@@ -899,7 +898,7 @@ figure > div, #the-red > div {
   }
 
   .slick-dots {
-    display: none;
+    display: none !important;
   }
 
   #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive  {
@@ -907,16 +906,13 @@ figure > div, #the-red > div {
     height: 40px;
   }
 
+
   .slider-list-1 {
     display: flex;
     flex-direction: column;
     max-height: 80vh;
     overflow-y: scroll; 
     padding: 0.5em;
-  }
-
-  .avatar > img {
-    margin: auto;
   }
 
 
