@@ -471,7 +471,7 @@ label[for="longFins-checkbox"] img {
 #freemask-display {
   position: absolute;
   top: 14vh;
-  left: 50.37%;
+  left: 3755px;
   z-index: 3;
 }
 
@@ -482,7 +482,7 @@ label[for="longFins-checkbox"] img {
 #longFins-display {
   position: fixed;
   top: 47vh;
-  left: 67%;
+  left: 3775px;
   z-index: 1;
 }
 
@@ -492,9 +492,9 @@ label[for="longFins-checkbox"] img {
 }
 
 #freesnorkel-display {
-  position: absolute;
+  position: fixed;
   top: 13vh;
-  left: 3375px;
+  left: 3500px;
   z-index: 3;
 }
 
@@ -506,14 +506,14 @@ label[for="longFins-checkbox"] img {
 #freeweight-display {
   position: absolute;
   top: 42vh;
-  left: 56.5%;
+  left: 3750px;
   z-index: 3;
 }
 
 #freediveComputer-display {
   position: absolute;
   top: 42vh;
-  left: 71.25%;
+  left: 4065px;
   z-index: 3;
 }
 
