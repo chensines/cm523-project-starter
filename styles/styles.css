@@ -935,7 +935,7 @@ figure > div, #the-red > div {
     left: 23%;
   }
 
-  #instructions-scuba > p, #instructions-free > p, #popup > p, figure > p, .slider-list-3 > p {
+  #instructions-scuba > p, #instructions-free > p, #popup > p, figure > p{
     line-height: 1.4;
     font-size: 12px;
   }
@@ -945,7 +945,7 @@ figure > div, #the-red > div {
   }
 
   figure {
-    width: 350px;
+    width: 300px;
   }
 
   figure > img {
@@ -964,8 +964,14 @@ figure > div, #the-red > div {
     width: 200px;
   }
 
-  .slider-list-3 > p {
+  .slider-list-3 > p,figcaption {
     max-width: 350px;
-    
+    font-size: 14px;
+    margin-bottom: 0.5em;
+  }
+
+  figure > div {
+    width: 60px;
+    height: 60px;
   }
 }
