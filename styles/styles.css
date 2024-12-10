@@ -331,8 +331,8 @@ label[for="bcd-checkbox"] img {
 
 #booties-display {
   position: fixed;
-  top: 78vh;
-  left: 27.3%;
+  top: calc(21vh + 5%); 
+  left: calc(27.5% + 5%);
   z-index: 3;
 }
 
