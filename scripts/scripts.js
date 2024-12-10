@@ -12,6 +12,22 @@ $(document).ready(function () {
     });
   });
 
+  $(document).ready(function() {
+    $('.slick-slider').slick({
+      slidesToShow: 1, 
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 400, 
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+
   function onForScuba() {
     document.getElementById('instructions-scuba').style.display = "block";
   }
@@ -93,19 +109,6 @@ $(document).ready(function () {
 });
 
 
-$('.slick-slider').slick({
-  slidesToShow: 1, // Shows 1 slide on small screens
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 400, // Small screens (mobile)
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});
 
 
  //scuba diving equipment clicking settings//
