@@ -1,5 +1,4 @@
 let currentPage = 0;
-const alertCounter = {};
 
 $(document).ready(function () {
   $('.main').hide();
@@ -23,13 +22,33 @@ $(document).ready(function () {
 
     $('.slick-slider').on('afterChange', function (event, slick, currentSlide) {
       currentPage = currentSlide;
-
-      if ((currentPage === 1 || currentPage === 2) && !alertCounter[currentPage]) {
-        alert('Choose all the equipment you need!');
-        alertCounter[currentPage] = 1;
+    
+      if (currentPage === 1 && !alertCounter[currentPage]) {
+        on1();
+      } else if (currentPage === 2 && !alertCounter[currentPage]) {
+        on2();
       }
+    
+      function on1() {
+        document.getElementById('instructions-scuba').style.display = "block";
+      }
+    
+      const gotcha1 = document.getElementById('gotcha1');
+      gotcha1.addEventListener('click', function () {
+        document.getElementById('instructions-scuba').style.display = "none";
+      });
+    
+      function on2() {
+        document.getElementById('instructions-free').style.display = "block";
+      }
+    
+      const gotcha2 = document.getElementById('gotcha2');
+      gotcha2.addEventListener('click', function () {
+        document.getElementById('instructions-free').style.display = "none";
+      });
+    
     });
-
+    
     setupButtonHandlers();
   }
 
@@ -45,9 +64,18 @@ $(document).ready(function () {
       if (allChecked) {
         $('.slick-slider').slick('slickGoTo', 3);
       } else {
-        alert('Choose ALL the equipment you need!');
+        on();
       }
     });
+
+    function on() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    const gotcha3 = document.getElementById('gotcha3');
+    gotcha3.addEventListener ('click', function (){
+      document.getElementById("popup").style.display = "none";
+    })
 
     $('#prevBtn3').on('click', function () {
       const previousPage = currentPage === 3 ? 1 : 2;
