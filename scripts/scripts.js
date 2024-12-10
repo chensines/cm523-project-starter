@@ -1,4 +1,5 @@
 let currentPage = 0;
+const alertCounter = {};
 
 $(document).ready(function () {
   $('.main').hide();
@@ -9,6 +10,24 @@ $(document).ready(function () {
       initializeSlider();
       $('#simulation').hide();
     });
+  });
+
+  function onForScuba() {
+    document.getElementById('instructions-scuba').style.display = "block";
+  }
+
+  function onForFree() {
+    document.getElementById('instructions-free').style.display = "block";
+  }
+
+  const gotcha1 = document.getElementById('gotcha1');
+  gotcha1.addEventListener('click', function () {
+    document.getElementById('instructions-scuba').style.display = "none";
+  });
+
+  const gotcha2 = document.getElementById('gotcha2');
+  gotcha2.addEventListener('click', function () {
+    document.getElementById('instructions-free').style.display = "none";
   });
 
   function initializeSlider() {
@@ -22,31 +41,14 @@ $(document).ready(function () {
 
     $('.slick-slider').on('afterChange', function (event, slick, currentSlide) {
       currentPage = currentSlide;
-    
+
       if (currentPage === 1 && !alertCounter[currentPage]) {
-        on1();
+        onForScuba();
+        alertCounter[currentPage] = 1; 
       } else if (currentPage === 2 && !alertCounter[currentPage]) {
-        on2();
+        onForFree();
+        alertCounter[currentPage] = 1; 
       }
-    
-      function on1() {
-        document.getElementById('instructions-scuba').style.display = "block";
-      }
-    
-      const gotcha1 = document.getElementById('gotcha1');
-      gotcha1.addEventListener('click', function () {
-        document.getElementById('instructions-scuba').style.display = "none";
-      });
-    
-      function on2() {
-        document.getElementById('instructions-free').style.display = "block";
-      }
-    
-      const gotcha2 = document.getElementById('gotcha2');
-      gotcha2.addEventListener('click', function () {
-        document.getElementById('instructions-free').style.display = "none";
-      });
-    
     });
     
     setupButtonHandlers();
@@ -73,9 +75,9 @@ $(document).ready(function () {
     }
 
     const gotcha3 = document.getElementById('gotcha3');
-    gotcha3.addEventListener ('click', function (){
+    gotcha3.addEventListener('click', function (){
       document.getElementById("popup").style.display = "none";
-    })
+    });
 
     $('#prevBtn3').on('click', function () {
       const previousPage = currentPage === 3 ? 1 : 2;
@@ -86,7 +88,7 @@ $(document).ready(function () {
       $('.slick-slider').fadeOut(500, function() {
         $('#simulation').fadeIn(500);
       });
-    });    
+    });
   }
 });
 

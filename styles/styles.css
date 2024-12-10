@@ -558,7 +558,7 @@ figure {
 
 figure > div, #the-red > div {
   background-color: red;
-  border: 10px solid #fff;
+  border: 10px solid black;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -767,3 +767,74 @@ figure > div, #the-red > div {
   height: 42px;
   place-items: center;
 }
+
+/* Media query for screens*/
+@media (max-width: 400px) and (max-height: 850px) {
+  html, body, .main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .logo-primary {
+    width: 250px;
+  }
+
+  h1 {
+    font-size: 50px;
+    display: flex;
+    width: 400px;
+  }
+
+ .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+
+  h2 {
+    grid-column: 1/ 2;
+    grid-row: 1;
+    font-size: 35px;
+    margin: 2em 1em 0.5em 1em;
+    text-align: center;
+  }
+
+  .nested-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #scuba-btn, #free-btn {
+    width: 350px;
+    height: 300px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2ems;
+    padding: 0.1em;
+  }
+
+  #scuba-btn {
+  background-position: right;
+  }
+  
+  #free-btn {
+    background-position: left;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  #scuba-btn > p , #free-btn > p {
+    max-width: 200px;
+    margin-top: 0.2em;
+    font-size: 14px;
+  }
+
+}
+
