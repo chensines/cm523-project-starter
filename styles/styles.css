@@ -906,7 +906,6 @@ figure > div, #the-red > div {
     height: 40px;
   }
 
-
   .slider-list-1 {
     display: flex;
     flex-direction: column;
@@ -915,6 +914,24 @@ figure > div, #the-red > div {
     padding: 0.5em;
   }
 
+  .slider-list-1 > .avatar {
+    background: transparent;
+  }
 
+  .slider-list-1 > .avatar > img {
+    display: block;
+    height: auto;
+    width: 200px;
+  }
 
+  input[type="checkbox"] {
+    width: 30px; 
+    border-radius: 50%;
+    height: 30px; 
+    opacity: 1;
+  }
+  [id*="display"] {
+    opacity: 0;
+}
+  
 }
