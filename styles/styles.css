@@ -480,7 +480,7 @@ label[for="longFins-checkbox"] img {
 }
 
 #longFins-display {
-  position: absolute;
+  position: fixed;
   top: 47vh;
   left: 67%;
   z-index: 1;
