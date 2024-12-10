@@ -276,6 +276,10 @@ label[for="bcd-checkbox"] img {
   padding: 10px;
 }
 
+.checked {
+  opacity: 0.25;
+}
+
 #bcd-display > img {
   width: 95%;
 }
@@ -518,6 +522,14 @@ figure {
   width: 500px;
 }
 
+figure > div, #the-red > div {
+  background-color: red;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
 #simulation {
   margin: 3em auto;
   width: 1300px;
@@ -665,3 +677,58 @@ figure {
   opacity: 0.2;
 }
 
+#movement {
+  display: grid;
+  grid-template-columns:55px 55px 55px;
+  grid-template-rows: 55px 55px 55px;
+  position: absolute;
+  top: 62vh;
+  left: 80%;
+  gap: 2px;
+  place-items: center;
+}
+
+#movement button {
+  background-color: transparent;
+  border: none;                 
+  padding: 0;                  
+  width: 50px;                  
+  height: 50px;    
+  transition: transform 0.3s ease;     
+}
+
+#movement button:active {
+  transform: scale(1.2);
+}
+
+#movement img {
+  width: 50px;
+}
+
+#up-Btn {
+  grid-column: 2;
+}
+
+#down-Btn {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+#left-Btn {
+  grid-column: 1;
+}
+
+#right-Btn {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#movement > #the-red > div {
+  grid-column: 2;
+  grid-row: 2;
+  border: 5px solid #ccc;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+}

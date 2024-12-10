@@ -87,80 +87,102 @@ const diveComputerDisplay = document.getElementById('diveComputer-display');
 bcdCheckbox.addEventListener('change', function () {
   if (bcdCheckbox.checked) {
     bcdDisplay.style.display = 'block';
+    bcdCheckbox.parentElement.classList.add('checked');
   } else {
     bcdDisplay.style.display = 'none';
+    bcdCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 bootiesCheckbox.addEventListener('change', function () {
   if (bootiesCheckbox.checked) {
     bootiesDisplay.style.display = 'block';
+    bootiesCheckbox.parentElement.classList.add('checked');
   }
   else {
   bootiesDisplay.style.display = 'none';
+  bootiesheckbox.parentElement.classList.remove('checked');
 }
 });
 
 maskCheckbox.addEventListener('change', function () {
   if (maskCheckbox.checked) {
     maskDisplay.style.display = 'block';
+    maskCheckbox.parentElement.classList.add('checked');
   }
   else {
   maskDisplay.style.display = 'none';
+  maskCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 shortFinsCheckbox.addEventListener('change', function () {
   if (shortFinsCheckbox.checked) {
     shortFinsDisplay.style.display = 'block';
+    shortFinsCheckbox.parentElement.classList.add('checked');
+
   }
   else {
   shortFinsDisplay.style.display = 'none';
+  shortFinsCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 snorkelCheckbox.addEventListener('change', function () {
   if (snorkelCheckbox.checked) {
     snorkelDisplay.style.display = 'block';
+    snorkelCheckbox.parentElement.classList.add('checked');
+
   }
   else {
   snorkelDisplay.style.display = 'none';
+  snorkelCheckbox.parentElement.classList.remove('checked');
+
 }
 });
 
 weightCheckbox.addEventListener('change', function () {
   if (weightCheckbox.checked) {
     weightDisplay.style.display = 'block';
+    weightCheckbox.parentElement.classList.add('checked');
+    
   }
   else {
   weightDisplay.style.display = 'none';
+  weightCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 surfaceCheckbox.addEventListener('change', function () {
   if (surfaceCheckbox.checked) {
     surfaceDisplay.style.display = 'block';
+    surfaceCheckbox.parentElement.classList.add('checked');
   }
   else {
   surfaceDisplay.style.display = 'none';
+  surfaceCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 regulatorCheckbox.addEventListener('change', function () {
   if (regulatorCheckbox.checked) {
     regulatorDisplay.style.display = 'block';
+    regulatorCheckbox.parentElement.classList.add('checked');
   }
   else {
   regulatorDisplay.style.display = 'none';
+  regulatorCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 diveComputerCheckbox.addEventListener('change', function () {
   if (diveComputerCheckbox.checked) {
     diveComputerDisplay.style.display = 'block';
+    diveComputerCheckbox.parentElement.classList.add('checked');
   }
   else {
   diveComputerDisplay.style.display = 'none';
+  diveComputerCheckbox.parentElement.classList.remove('checked');
 }
 });
 
@@ -179,52 +201,66 @@ const freediveComputerDisplay = document.getElementById('freediveComputer-displa
 
 freemaskCheckbox.addEventListener('change', function () {
   if (freemaskCheckbox.checked) {
-    freemaskDisplay.style.display = 'block';
+    freemaskDisplay.style.display = 'block'; 
+    freemaskCheckbox.parentElement.classList.add('checked');
+  } else {
+    freemaskDisplay.style.display = 'none';
+    freemaskCheckbox.parentElement.classList.remove('checked'); 
   }
-  else {
-  freemaskDisplay.style.display = 'none';
-}
 });
+
 
 longFinsCheckbox.addEventListener('change', function () {
   if (longFinsCheckbox.checked) {
     longFinsDisplay.style.display = 'block';
+    longFinsCheckbox.parentElement.classList.add('checked');
   }
   else {
   longFinsDisplay.style.display = 'none';
+  longFinsCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 freesnorkelCheckbox.addEventListener('change', function () {
   if (freesnorkelCheckbox.checked) {
     freesnorkelDisplay.style.display = 'block';
+    freesnorkelCheckbox.parentElement.classList.add('checked');
   }
   else {
   freesnorkelDisplay.style.display = 'none';
+  freesnorkelCheckbox.parentElement.classList.remove('checked');
 }
 });
 
 freeweightCheckbox.addEventListener('change', function () {
   if (freeweightCheckbox.checked) {
     freeweightDisplay.style.display = 'block';
+    freeweightCheckbox.parentElement.classList.add('checked');
   }
   else {
   freeweightDisplay.style.display = 'none';
+  freeweightCheckbox.parentElement.classList.remove('checked')
 }
 });
 
 freediveComputerCheckbox.addEventListener('change', function () {
   if (freediveComputerCheckbox.checked) {
     freediveComputerDisplay.style.display = 'block';
+    freediveComputerCheckbox.parentElement.classList.add('checked');
   }
   else {
   freediveComputerDisplay.style.display = 'none';
+  freediveComputerCheckbox.parentElement.classList.remove('checked');
 }
 });
 
  // diver movement settings//
 const scubaIcon = document.getElementById('scubaicon');
 const container = document.getElementById('simulation');
+const up = document.getElementById('up-Btn');
+const down = document.getElementById('down-Btn');
+const right = document.getElementById('right-Btn');
+const left = document.getElementById('left-Btn');
 
 let positionX = 600;
 let positionY = 200;
@@ -238,6 +274,7 @@ function updatePosition() {
     scubaIcon.style.top = `${positionY}px`;
     scubaIcon.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
 }
+
 
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
@@ -263,7 +300,36 @@ document.addEventListener('keydown', (event) => {
     updatePosition();
 });
 
+up.addEventListener('click', function () {
+  positionY = Math.max(0, positionY - step);
+  direction = -90;
+
+  updatePosition();
+});
+
+down.addEventListener('click', function () {
+  positionY = Math.min(container.offsetHeight - scubaIcon.offsetHeight, positionY + step);
+  direction = 90;
+
+  updatePosition();
+});
+
+left.addEventListener('click', function () {
+  positionX = Math.max(0, positionX - step);
+  direction = 180; 
+
+  updatePosition();
+});
+
+right.addEventListener('click', function () {
+  positionX = Math.min(container.offsetWidth - scubaIcon.offsetWidth, positionX + step);
+  direction = 0;
+
+  updatePosition();
+});
+
 
 updatePosition();
+
 
 
