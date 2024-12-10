@@ -321,15 +321,15 @@ let direction = 0;
 
 if (smallScreen.matches) {
   // For screens <= 400px
-  positionX = 150; // Initial X position for small screens
-  positionY = 100; // Initial Y position for small screens
-  scubaIcon.style.width = '50px'; // Smaller diver icon
+  positionX = 150; 
+  positionY = 100;
+  scubaIcon.style.width = '50px'; 
   scubaIcon.style.height = '50px';
 } else {
   // For larger screens
   positionX = 600;
   positionY = 200;
-  scubaIcon.style.width = '100px'; // Default diver icon size
+  scubaIcon.style.width = '100px'; 
   scubaIcon.style.height = '100px';
 }
 
