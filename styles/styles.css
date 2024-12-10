@@ -856,7 +856,7 @@ figure > div, #the-red > div {
     width: 100%; /* Buttons occupy full width */
     max-width: 300px; /* Prevent buttons from exceeding layout */
     height: 300px; /* Adjusted height for smaller screens */
-    margin: 0.5em 0; 
+    margin: 0.5em 0 1em 0; 
     background-size: cover;
   }
 
