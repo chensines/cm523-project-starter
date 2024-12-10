@@ -14,13 +14,11 @@ $(document).ready(function () {
 
   function initializeSlider() {
     $('.slick-slider').slick({
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      vertical: true, // Use vertical scrolling
-      verticalSwiping: true,
       responsive: [
         {
           breakpoint: 400,
