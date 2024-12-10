@@ -919,5 +919,12 @@ figure > div, #the-red > div {
     height: 40px;
   }
 
-  
+  .slider-list-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider-list-1 div {
+    width: 80%;
+  }
 }
