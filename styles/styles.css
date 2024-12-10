@@ -815,7 +815,7 @@ figure > div, #the-red > div {
 
   .container {
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -906,7 +906,7 @@ figure > div, #the-red > div {
     height: 40px;
   }
 
-  .slider-list-1 {
+  .slider-list-1, .slider-list-2 {
     display: flex;
     flex-direction: column;
     max-height: 100%;
@@ -914,11 +914,11 @@ figure > div, #the-red > div {
     padding: 0.5em;
   }
 
-  .slider-list-1 > .avatar {
+  .slider-list-1 > .avatar, .slider-list-2 > .avatar {
     background: transparent;
   }
 
-  .slider-list-1 > .avatar > img {
+  .slider-list-1 > .avatar > img, .slider-list-2 > .avatar > img {
     display: block;
     height: auto;
     width: 200px;
@@ -935,14 +935,16 @@ figure > div, #the-red > div {
     opacity: 0;
   }
 
-  [id*="instructions"] {
+ #instructions-scuba, #instructions-free, #popup {
     width: 200px;
     height: 400px;
     height: auto;
+    position: fixed;
+    top: 50%;
+    left: 23%;
   }
 
-
-  [id*="instructions"] > p {
+  #instructions-scuba > p, #instructions-free > p, #popup > p {
     line-height: 1.4;
     font-size: 12px;
   }
@@ -950,4 +952,6 @@ figure > div, #the-red > div {
   h3 {
     font-size: 14px;
   }
+
+  
 }
