@@ -15,6 +15,7 @@ body, html {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: scroll;
   justify-content: center;
   align-items: center;
 }
@@ -106,7 +107,7 @@ li a:hover {
 }
 
 .container {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
 }
@@ -266,9 +267,10 @@ p {
 
 .slider-list-1, .slider-list-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 30% 25% 30%;
-  width: 100%;
+  width: 60%;
+  height: 90vh;
   gap: 10px;
 }
 
@@ -301,6 +303,7 @@ h6 {
   text-align: center;
 }
 
+
 label[for="shortFins-checkbox"] img {
   height: 100px;
   margin-top: 2em;
@@ -316,20 +319,20 @@ label[for="bcd-checkbox"] img {
 }
 
 #bcd-display > img {
-  width: 95%;
+  width: 80%;
 }
 
 #bcd-display {
   position: absolute;
-  top: 23vh;
-  left: 42.8%;
+  top: 21vh;
+  left: 42.9%;
   z-index: 3;
 }
 
 #booties-display {
   position: absolute;
-  top: 75vh;
-  left: 42.6%;
+  top: 78vh;
+  left: 42.7%;
   z-index: 3;
 }
 
@@ -346,19 +349,14 @@ label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
   margin: 1em auto 0 auto;
 }
 
-.mask {
-  grid-column: 1/ 2;
-  grid-row: 2/ 3;
-}
-
 #mask-display > img {
   width: 26%;
 }
 
 #mask-display {
   position: absolute;
-  top: 15.5vh;
-  left: 42.45%;
+  top: 15vh;
+  left: 42.52%;
   z-index: 3;
 }
 
@@ -368,7 +366,7 @@ label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
 
 #shortFins-display {
   position: absolute;
-  top: 55.5vh;
+  top: 56vh;
   left: 38%;
   transform: rotate(90deg);
   z-index: 1;
@@ -380,14 +378,14 @@ label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img, label[for=
 }
 
 #snorkel-display > img {
-  width: 18%;
+  width: 19%;
   transform: rotate(-90deg);
 }
 
 #snorkel-display {
   position: absolute;
-  top: 15.5vh;
-  left: 39%;
+  top: 15vh;
+  left:39%;
   z-index: 3;
 }
 
@@ -409,7 +407,7 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 #regulator-display {
   position: absolute;
   top: 18vh;
-  left: 38.2%;
+  left: 38.3%;
   z-index: 3;
 }
 
@@ -449,28 +447,24 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 }
 .slider-list-1 .avatar {
   display: flex;
-  grid-column: 4/ 5;
-  grid-row: 1/ 4;
 }
 
 .slider-list-2 .avatar {
   display: flex;
-  grid-column: 4/ 5;
-  grid-row: 1/ 4;
 }
 
 .avatar > img {
-  width: 50%;
-  margin-left: 0;
+  width: 330px;
   z-index: 2;
-  margin-left: 10em;
+  position: absolute;
+  left: 43.2%;
 }
 
 .slider-list-2 > .avatar > img {
-  width: 50%;
-  margin-left: 0;
+  width: 330px;
   z-index: 2;
-  margin-left: 5em;
+  position: absolute;
+  left: 43.2%;
 }
 
 label[for="longFins-checkbox"] img {
@@ -919,7 +913,6 @@ figure > div, #the-red > div {
     font-size: 13px;
     height: 40px;
   }
-
 
   .slider-list-1 {
     display: flex;
