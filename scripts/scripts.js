@@ -92,14 +92,15 @@ $(document).ready(function () {
   }
 });
 
+
 $('.slick-slider').slick({
   slidesToShow: 1, // Shows 1 slide on small screens
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 480, // Small screens (mobile)
+      breakpoint: 400, // Small screens (mobile)
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }

@@ -794,6 +794,11 @@ figure > div, #the-red > div {
     text-align: center;
   }
 
+  .slick-slide {
+    width: 100%;
+    margin: auto;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
