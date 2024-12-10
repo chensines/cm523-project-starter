@@ -445,11 +445,8 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   left: 46.85%;
   z-index: 3;
 }
-.slider-list-1 .avatar {
-  display: flex;
-}
 
-.slider-list-2 .avatar {
+.avatar {
   display: flex;
 }
 
@@ -460,12 +457,6 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   left: 43.2%;
 }
 
-.slider-list-2 > .avatar > img {
-  width: 330px;
-  z-index: 2;
-  position: absolute;
-  left: 52.2%;
-}
 
 label[for="longFins-checkbox"] img {
   margin-top: 1em;
