@@ -311,89 +311,95 @@ const down = document.getElementById('down-Btn');
 const right = document.getElementById('right-Btn');
 const left = document.getElementById('left-Btn');
 
+
 let positionX = 600;
 let positionY = 200;
-
 const step = 10;
-
 let direction = 0;
 
+function adjustForScreenSize() {
+  const smallScreen = window.matchMedia('(max-width: 400px)');
 
-if (smallScreen.matches) {
-  // For screens <= 400px
-  positionX = 150; 
-  positionY = 100;
-  scubaIcon.style.width = '50px'; 
-  scubaIcon.style.height = '50px';
-} else {
-  // For larger screens
-  positionX = 600;
-  positionY = 200;
-  scubaIcon.style.width = '100px'; 
-  scubaIcon.style.height = '100px';
+  if (smallScreen.matches) {
+    // For screens <= 400px
+    positionX = 150; 
+    positionY = 100; 
+    scubaIcon.style.width = '50px'; 
+    scubaIcon.style.height = '50px';
+  } else {
+    // For larger screens
+    positionX = 600;
+    positionY = 200;
+    scubaIcon.style.width = '100px'; 
+    scubaIcon.style.height = '100px';
+  }
+
+  updatePosition();
 }
 
 function updatePosition() {
-    scubaIcon.style.left = `${positionX}px`;
-    scubaIcon.style.top = `${positionY}px`;
-    scubaIcon.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+  scubaIcon.style.left = `${positionX}px`;
+  scubaIcon.style.top = `${positionY}px`;
+  scubaIcon.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
 }
 
-
+// Listen for keydown events //
 document.addEventListener('keydown', (event) => {
-    switch (event.key) {
-        case 'ArrowUp':
-            positionY = Math.max(0, positionY - step);
-            direction = -90;
-            break;
-        case 'ArrowDown':
-            positionY = Math.min(container.offsetHeight - scubaIcon.offsetHeight, positionY + step);
-            direction = 90;
-            break;
-        case 'ArrowLeft':
-            positionX = Math.max(0, positionX - step);
-            direction = 180; 
-            break;
-        case 'ArrowRight':
-            positionX = Math.min(container.offsetWidth - scubaIcon.offsetWidth, positionX + step);
-            direction = 0;
-            break;
-        default:
-            return;
-    }
-    updatePosition();
+  switch (event.key) {
+    case 'ArrowUp':
+      positionY = Math.max(0, positionY - step);
+      direction = -90;
+      break;
+    case 'ArrowDown':
+      positionY = Math.min(container.offsetHeight - scubaIcon.offsetHeight, positionY + step);
+      direction = 90;
+      break;
+    case 'ArrowLeft':
+      positionX = Math.max(0, positionX - step);
+      direction = 180; 
+      break;
+    case 'ArrowRight':
+      positionX = Math.min(container.offsetWidth - scubaIcon.offsetWidth, positionX + step);
+      direction = 0;
+      break;
+    default:
+      return;
+  }
+  updatePosition();
 });
 
+// Listen for button clicks //
 up.addEventListener('click', function () {
   positionY = Math.max(0, positionY - step);
   direction = -90;
-
   updatePosition();
 });
 
 down.addEventListener('click', function () {
   positionY = Math.min(container.offsetHeight - scubaIcon.offsetHeight, positionY + step);
   direction = 90;
-
   updatePosition();
 });
 
 left.addEventListener('click', function () {
   positionX = Math.max(0, positionX - step);
   direction = 180; 
-
   updatePosition();
 });
 
 right.addEventListener('click', function () {
   positionX = Math.min(container.offsetWidth - scubaIcon.offsetWidth, positionX + step);
   direction = 0;
-
   updatePosition();
 });
 
 
+adjustForScreenSize();
+window.addEventListener('resize', adjustForScreenSize);
+
+
 updatePosition();
+
 
 
 
