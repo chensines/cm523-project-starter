@@ -802,15 +802,19 @@ figure > div, #the-red > div {
     grid-template-columns: 120px auto;
     grid-template-rows: auto;
     width: 100%;
-    height: 100px;
-    padding: 10px 0;
+    height: 100%;
+    padding: 7em 0 0 0 ;
   }
 
   nav {
     display: flex;
-    gap: 5px;
     font-size: 12px;
     line-height: 1.4;
+    align-items: flex-end;
+  }
+
+  nav ul {
+    gap: 25px;
   }
 
   .logo-secondary {
@@ -834,7 +838,7 @@ figure > div, #the-red > div {
 
   h2 {
     font-size: 28px;
-    width: 100%;
+    width: 380px;
     display: block;
     text-align: center;
     line-height: 1.2;
@@ -868,39 +872,52 @@ figure > div, #the-red > div {
     width: 15cap;
     margin: 0.5em 3em;
   }
+
   h4 {
-    font-size: 20px; /* Reduced font size for better fit */
+    font-size: 20px;
+    margin: 0.5em;
+  }
+
+  #free-btn > h4 {
+    margin: 0.5em 0.5em 0.5em auto;
   }
 
   #scuba-btn > p, #free-btn > p {
     max-width: 180px;
     font-size: 13px; 
-    line-height: 1.4; 
+    line-height: 1.4;
   }
 
+  #scuba-btn > p {
+    margin: 0.5em;
+  } 
+  
+  #free-btn > p {
+    margin: 0.5em 0.5em 0.5em auto;
+  }
   /* Slick slider styles */
   .slick-slider {
     width: 100%; 
     display: block;
   }
 
-  .slick-track {
+  /*.slick-track {
     display: flex;
-  }
+  }*/
 
   .slick-slide {
     width: calc(100% - 20px); /* Responsive slide width with margins */
     box-sizing: border-box; /* Prevent overflow */
   }
 
-
-  /* Adjust dots for better visibility */
   .slick-dots {
-    bottom: -20px;
-    text-align: center;
+    display: none;
   }
 
-  .slick-dots li button:before {
-    font-size: 12px;
+  #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive  {
+    font-size: 13px;
+    height: 40px;
   }
+
+  
 }
