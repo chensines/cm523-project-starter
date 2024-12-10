@@ -768,7 +768,7 @@ figure > div, #the-red > div {
   place-items: center;
 }
 /* Media query for screens*/
-@media (max-width: 400px) and (max-height: 850px) {
+@media (max-width: 400px) and (max-height: 860px) {
   html, body, .main {
     margin: 0;
     padding: 0;
@@ -933,6 +933,6 @@ figure > div, #the-red > div {
     margin: auto;
   }
 
-  
+
 
 }
