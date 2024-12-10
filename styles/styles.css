@@ -775,11 +775,13 @@ figure > div, #the-red > div {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    display: flex;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
     overflow-x: hidden;
   }
+  
   .logo-primary {
     width: 250px;
   }
@@ -787,18 +789,19 @@ figure > div, #the-red > div {
   h1 {
     font-size: 50px;
     display: flex;
-    width: 400px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
- .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   h2 {
-    grid-column: 1/ 2;
-    grid-row: 1;
     font-size: 35px;
     margin: 2em 1em 0.5em 1em;
     text-align: center;
@@ -811,10 +814,10 @@ figure > div, #the-red > div {
   }
 
   #scuba-btn, #free-btn {
-    width: 350px;
-    height: 300px;
+    width: 80%;
+    height: 250px;
     margin-top: 0.2em;
-    margin-bottom: 0.2ems;
+    margin-bottom: 0.2em;
     padding: 0.1em;
   }
 
@@ -830,11 +833,9 @@ figure > div, #the-red > div {
     font-size: 24px;
   }
 
-  #scuba-btn > p , #free-btn > p {
+  #scuba-btn > p, #free-btn > p {
     max-width: 200px;
     margin-top: 0.2em;
     font-size: 14px;
   }
-
 }
-
