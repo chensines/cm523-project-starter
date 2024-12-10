@@ -915,13 +915,7 @@ figure > div, #the-red > div {
   }
 
   .slider-list-1 > .avatar, .slider-list-2 > .avatar {
-    background: transparent;
-  }
-
-  .slider-list-1 > .avatar > img, .slider-list-2 > .avatar > img {
-    display: block;
-    height: auto;
-    width: 200px;
+    display: none;
   }
 
   input[type="checkbox"] {
@@ -953,5 +947,4 @@ figure > div, #the-red > div {
     font-size: 14px;
   }
 
-  
 }
