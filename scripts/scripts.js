@@ -63,8 +63,7 @@ $(document).ready(function () {
 });
 
 
-
-
+ //scuba diving equipment clicking settings//
 const bcdCheckbox = document.getElementById('bcd-checkbox');
 const bcdDisplay = document.getElementById('bcd-display');
 const bootiesCheckbox = document.getElementById('booties-checkbox');
@@ -165,7 +164,7 @@ diveComputerCheckbox.addEventListener('change', function () {
 }
 });
 
-
+ //freediving equipment clicking settings//
 const freemaskCheckbox = document.getElementById('freemask-checkbox');
 const freemaskDisplay = document.getElementById('freemask-display');
 const longFinsCheckbox = document.getElementById('longFins-checkbox');
@@ -223,14 +222,14 @@ freediveComputerCheckbox.addEventListener('change', function () {
 }
 });
 
+ // diver movement settings//
 const scubaIcon = document.getElementById('scubaicon');
-const container = document.getElementById('simulation');
+const container = document.getElementById('boarder');
 
-// Initial position
 let positionX = 600;
 let positionY = 200;
 
-const step = 20;
+const step = 10;
 
 let direction = 0;
 
@@ -238,10 +237,6 @@ function updatePosition() {
     scubaIcon.style.left = `${positionX}px`;
     scubaIcon.style.top = `${positionY}px`;
     scubaIcon.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-}
-
-function updateAirPressure() {
-
 }
 
 document.addEventListener('keydown', (event) => {
@@ -266,28 +261,9 @@ document.addEventListener('keydown', (event) => {
             return;
     }
     updatePosition();
-    updateBar()
 });
 
 
 updatePosition();
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const countdownSeconds = 35;
-  let timeRemaining = countdownSeconds;
-
-  const timerBar = document.getElementById('timer-bar');
-  timerBar.style.width = '100%';
-
-  const interval = setInterval(() => {
-    timeRemaining--;
-    const widthPercentage = (timeRemaining / countdownSeconds) * 100;
-    timerBar.style.width = `${widthPercentage}%`;
-
-    if (timeRemaining <= 0) {
-      clearInterval(interval);
-      alert(`Time's Up!`);
-    }
-  }, 1000);
-});
