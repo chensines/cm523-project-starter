@@ -105,13 +105,13 @@ li a:hover {
   color: yellow;
 }
 
-.slick-slide {
+.container {
   height: 90vh;
   width: 100%;
   background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
 }
 
-.slick-slide:nth-of-type(2) {
+.container:nth-of-type(2) {
   width: 100%;
   display: grid !important;
   grid-template-columns: 70% 30%;
@@ -794,8 +794,8 @@ figure > div, #the-red > div {
     text-align: center;
   }
 
-  .slick-slider {
-    width: 100r;
+  .container {
+    width: 100%;
     margin: auto;
   }
 
