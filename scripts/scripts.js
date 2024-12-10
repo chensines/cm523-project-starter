@@ -12,21 +12,40 @@ $(document).ready(function () {
     });
   });
 
-  $(document).ready(function() {
+  function initializeSlider() {
     $('.slick-slider').slick({
-      slidesToShow: 1, 
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
       slidesToScroll: 1,
       responsive: [
         {
-          breakpoint: 400, 
+          breakpoint: 400,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false, 
           }
         }
       ]
     });
-  });
+
+    $('.slick-slider').on('afterChange', function (event, slick, currentSlide) {
+      currentPage = currentSlide;
+
+      if (currentPage === 1 && !alertCounter[currentPage]) {
+        onForScuba();
+        alertCounter[currentPage] = 1; 
+      } else if (currentPage === 2 && !alertCounter[currentPage]) {
+        onForFree();
+        alertCounter[currentPage] = 1; 
+      }
+    });
+
+    setupButtonHandlers();
+  }
 
   function onForScuba() {
     document.getElementById('instructions-scuba').style.display = "block";
@@ -45,30 +64,6 @@ $(document).ready(function () {
   gotcha2.addEventListener('click', function () {
     document.getElementById('instructions-free').style.display = "none";
   });
-
-  function initializeSlider() {
-    $('.slick-slider').slick({
-      dots: true,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    });
-
-    $('.slick-slider').on('afterChange', function (event, slick, currentSlide) {
-      currentPage = currentSlide;
-
-      if (currentPage === 1 && !alertCounter[currentPage]) {
-        onForScuba();
-        alertCounter[currentPage] = 1; 
-      } else if (currentPage === 2 && !alertCounter[currentPage]) {
-        onForFree();
-        alertCounter[currentPage] = 1; 
-      }
-    });
-    
-    setupButtonHandlers();
-  }
 
   function setupButtonHandlers() {
     $('#scuba-btn').on('click', () => $('.slick-slider').slick('slickGoTo', 1));
@@ -91,7 +86,7 @@ $(document).ready(function () {
     }
 
     const gotcha3 = document.getElementById('gotcha3');
-    gotcha3.addEventListener('click', function (){
+    gotcha3.addEventListener('click', function () {
       document.getElementById("popup").style.display = "none";
     });
 
@@ -101,12 +96,13 @@ $(document).ready(function () {
     });
 
     $('#dive').on('click', function () {
-      $('.slick-slider').fadeOut(500, function() {
+      $('.slick-slider').fadeOut(500, function () {
         $('#simulation').fadeIn(500);
       });
     });
   }
 });
+
 
 
 
