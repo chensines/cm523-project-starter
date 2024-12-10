@@ -77,6 +77,7 @@ a:link {
   display: none;
 }
 
+
 #stay {
   height: 10vh;
   background-color: rgba(15,49,71,1);
@@ -113,7 +114,7 @@ li a:hover {
 }
 
 .container:nth-of-type(2) {
-  width: 100%;
+  width: 1550px;
   display: grid !important;
   grid-template-columns: 70% 30%;
   grid-template-rows: 100px auto;
@@ -267,11 +268,11 @@ p {
 
 .slider-list-1, .slider-list-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr ;
   grid-template-rows: 30% 25% 30%;
-  width: 60%;
-  height: 90vh;
+  width: 80%;
   gap: 10px;
+  margin: auto;
 }
 
 .slider-list-2 {
@@ -303,7 +304,6 @@ h6 {
   text-align: center;
 }
 
-
 label[for="shortFins-checkbox"] img {
   height: 100px;
   margin-top: 2em;
@@ -319,20 +319,20 @@ label[for="bcd-checkbox"] img {
 }
 
 #bcd-display > img {
-  width: 80%;
+  width: 92%;
 }
 
 #bcd-display {
-  position: absolute;
+  position: fixed;
   top: 21vh;
-  left: 42.9%;
+  left: 27.5%;
   z-index: 3;
 }
 
 #booties-display {
-  position: absolute;
+  position: fixed;
   top: 78vh;
-  left: 42.7%;
+  left: 27.3%;
   z-index: 3;
 }
 
@@ -349,14 +349,15 @@ label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
   margin: 1em auto 0 auto;
 }
 
+
 #mask-display > img {
   width: 26%;
 }
 
 #mask-display {
-  position: absolute;
-  top: 15vh;
-  left: 42.52%;
+  position: fixed;
+  top: 13.5vh;
+  left: 27.15%;
   z-index: 3;
 }
 
@@ -365,9 +366,9 @@ label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
 }
 
 #shortFins-display {
-  position: absolute;
-  top: 56vh;
-  left: 38%;
+  position: fixed;
+  top: 55.5vh;
+  left: 22.5%;
   transform: rotate(90deg);
   z-index: 1;
 }
@@ -378,14 +379,14 @@ label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img, label[for=
 }
 
 #snorkel-display > img {
-  width: 19%;
+  width: 18%;
   transform: rotate(-90deg);
 }
 
 #snorkel-display {
-  position: absolute;
-  top: 15vh;
-  left:39%;
+  position: fixed;
+  top: 14vh;
+  left: 23.7%;
   z-index: 3;
 }
 
@@ -405,9 +406,9 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 }
 
 #regulator-display {
-  position: absolute;
-  top: 18vh;
-  left: 38.3%;
+  position: fixed;
+  top: 16vh;
+  left: 22.9%;
   z-index: 3;
 }
 
@@ -417,9 +418,9 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 }
 
 #weight-display {
-  position: absolute;
+  position: fixed;
   top: 45vh;
-  left: 42.5%;
+  left: 27%;
   z-index: 3;
 }
 
@@ -429,9 +430,9 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 }
 
 #surface-display {
-  position: absolute;
-  top: 25vh;
-  left: 38.5%;
+  position: fixed;
+  top: 22vh;
+  left: 23.5%;
   z-index: 1;
 }
 
@@ -440,21 +441,22 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 }
 
 #diveComputer-display {
-  position: absolute;
+  position: fixed;
   top: 43vh;
-  left: 46.85%;
-  z-index: 3;
-}
-
-.avatar {
-  display: flex;
-}
-
-.avatar > img {
-  width: 330px;
+  left: 31.45%;
   z-index: 2;
-  position: absolute;
-  left: 43.2%;
+}
+.slider-list-1 .avatar, .slider-list-2 .avatar {
+  display: block;
+  grid-column: 1/ 2;
+  grid-row: 1/ 4;
+  width: 330px;
+  height: 742.5px;
+  z-index: 2;
+  background-image: url(../images/avatar.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -468,8 +470,8 @@ label[for="longFins-checkbox"] img {
 
 #freemask-display {
   position: absolute;
-  top: 15vh;
-  left: 66.75%;
+  top: 14vh;
+  left: 50.37%;
   z-index: 3;
 }
 
@@ -491,8 +493,8 @@ label[for="longFins-checkbox"] img {
 
 #freesnorkel-display {
   position: absolute;
-  top: 15vh;
-  left: 63.3%;
+  top: 13vh;
+  left: 3375px;
   z-index: 3;
 }
 
@@ -504,7 +506,7 @@ label[for="longFins-checkbox"] img {
 #freeweight-display {
   position: absolute;
   top: 42vh;
-  left: 66.5%;
+  left: 56.5%;
   z-index: 3;
 }
 
