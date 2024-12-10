@@ -262,7 +262,7 @@ p {
 }
 
 .slider-list-1 img, .slider-list-2 img {
-  display: flex;
+  display: block;
   margin: 1em auto;
 }
 
