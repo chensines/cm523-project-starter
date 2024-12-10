@@ -224,7 +224,7 @@ freediveComputerCheckbox.addEventListener('change', function () {
 
  // diver movement settings//
 const scubaIcon = document.getElementById('scubaicon');
-const container = document.getElementById('boarder');
+const container = document.getElementById('simulation');
 
 let positionX = 600;
 let positionY = 200;
