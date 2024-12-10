@@ -19,6 +19,8 @@ $(document).ready(function () {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      vertical: true, // Use vertical scrolling
+      verticalSwiping: true,
       responsive: [
         {
           breakpoint: 400,
