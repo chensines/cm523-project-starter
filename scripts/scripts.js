@@ -32,6 +32,11 @@ $(document).ready(function () {
       ]
     });
 
+    $(window).on('resize', function () {
+      $('.slick-slider').slick('setPosition');
+    });
+    
+
     $('.slick-slider').on('afterChange', function (event, slick, currentSlide) {
       currentPage = currentSlide;
 

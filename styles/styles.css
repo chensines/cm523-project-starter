@@ -469,7 +469,7 @@ label[for="longFins-checkbox"] img {
 }
 
 #freemask-display {
-  position: absolute;
+  position: fixed;
   top: 14vh;
   left: 3755px;
   z-index: 3;
@@ -504,14 +504,14 @@ label[for="longFins-checkbox"] img {
 }
 
 #freeweight-display {
-  position: absolute;
+  position: fixed;
   top: 42vh;
   left: 3750px;
   z-index: 3;
 }
 
 #freediveComputer-display {
-  position: absolute;
+  position: fixed;
   top: 42vh;
   left: 4065px;
   z-index: 3;
