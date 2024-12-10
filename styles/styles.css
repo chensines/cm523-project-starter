@@ -935,7 +935,7 @@ figure > div, #the-red > div {
     left: 23%;
   }
 
-  p {
+  #instructions-scuba > p, #instructions-free > p, #popup > p, figure > p, .slider-list-3 > p {
     line-height: 1.4;
     font-size: 12px;
   }
@@ -950,5 +950,22 @@ figure > div, #the-red > div {
 
   figure > img {
     width: 55%;
+  }
+
+  #simulation {
+    width: 400px;
+    height: 100vh;
+  }
+
+  #movement {
+    position: fixed;
+    bottom: 5%;
+    left: 25%;
+    width: 200px;
+  }
+
+  .slider-list-3 > p {
+    max-width: 350px;
+    
   }
 }
