@@ -216,11 +216,11 @@ p {
 }
 
 #free-btn {
-  background-image: url(/images/freediving.png);
+  background-image: url(../images/freediving.png);
 }
 
 #scuba-btn {
-  background-image: url(/images/scubadiver.png);
+  background-image: url(../images/scubadiver.png);
   justify-self: right;
 }
 
