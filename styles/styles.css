@@ -946,20 +946,21 @@ figure > div, #the-red > div {
 
   figure {
     width: 300px;
+    margin: 0.5em auto;
   }
 
   figure > img {
-    width: 55%;
+    width: 200px;
   }
 
   #simulation {
     width: 400px;
-    height: 100vh;
+    height: 650px;
   }
 
   #movement {
     position: fixed;
-    bottom: 5%;
+    bottom: 20px;
     left: 25%;
     width: 200px;
   }
