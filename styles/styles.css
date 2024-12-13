@@ -826,20 +826,24 @@ figure > div, #the-red > div {
   }
 
   .avatar {
-    position: fixed;
     left: 37%;
     top:13%;
     transform: translate(-50%, -50%);
-    padding: 4rem;
+  }
+
+  .avatar2 {
+    left: 63%;
+    top:11%;
+    transform: translate(-50%, -50%);
   }
   
-  .avatar > img  {
+  .avatar > img, .avatar2 > img  {
     height: 400px;
     width: auto;
-    z-index: 3;
+
   } 
 
-  .slider-list-1 {
+  .slider-list-1, .slider-list-2, .slider-list-3 {
     width: 100%;
     height: auto;
     display: flex;
@@ -913,5 +917,71 @@ figure > div, #the-red > div {
     width: 75%;
   }
 
+  #instructions-scuba, #instructions-free, #popup {
+    width: 300px;
+    height: auto;
+  }
 
+
+  #freemask-display img {
+    width: 35%;
+  }
+  
+  #freemask-display {
+    position: absolute;
+    top: 14%;
+    left: 37.5%;
+    z-index: 3;
+  }
+  
+  #longFins-display img {
+    width: 60%;
+  }
+  
+  #longFins-display {
+    top: 47%;
+    left: 15%;
+  }
+  
+  #freesnorkel-display img {
+    width: 55%;
+  }
+  
+  #freediveComputer-display {
+    position: fixed;
+    top: 43%;
+    left: 68%;
+    z-index: 3;
+  }
+
+  .slider-list-3 {
+    margin-top: 0.5em;
+  }
+
+  .slider-list-3 p {
+    margin-bottom: 0.5em;
+  }
+
+  figure {
+    max-width: 350px;
+  }
+
+  figure img {
+    width: 50%;
+  }
+
+  figure > div {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px solid black;
+  }
+
+  #scubaicon {
+    width: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%), rotate(0deg);
+    transition: transform 0.2s ease;
+    z-index: 3;
+  }
 }
+
