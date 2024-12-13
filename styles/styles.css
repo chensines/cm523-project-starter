@@ -762,6 +762,10 @@ figure > div, #the-red > div {
     width: 100%;
   }
 
+  #stay {
+    height: 100%;
+  }
+
   h1 {
     font-size: 60px;
   }
@@ -802,5 +806,17 @@ figure > div, #the-red > div {
     overflow: hidden; 
   }
   
+  #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive {
+    font-size: 13px;
+  }
+
+  .avatar img, .avatar2 img {
+    width: 50%;
+    height: auto;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
 }
 
