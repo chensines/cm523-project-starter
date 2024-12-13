@@ -983,5 +983,10 @@ figure > div, #the-red > div {
     transition: transform 0.2s ease;
     z-index: 3;
   }
+
+  #simulation {
+    width: 100%;
+    height: auto;
+  }
 }
 
