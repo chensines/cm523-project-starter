@@ -28,6 +28,7 @@ $(document).ready(function () {
             slidesToScroll: 1,
             dots: false,
             arrows: false, 
+            adaptiveHeight: true,
           }
         }
       ]
