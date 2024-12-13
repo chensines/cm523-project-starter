@@ -808,6 +808,9 @@ figure > div, #the-red > div {
     word-wrap: break-word; 
   }
 
+  #free-btn {
+    margin-bottom: 2em;
+  }
   #scuba-btn p {
     margin: 0;
     padding: 0.5em;
@@ -1006,6 +1009,10 @@ figure > div, #the-red > div {
     width: 100%;
     height: auto;
     overflow-y: hidden;
+  }
+
+  #movement {
+    z-index: 4;
   }
 }
 

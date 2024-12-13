@@ -325,9 +325,9 @@ function adjustForScreenSize() {
 
   if (smallScreen.matches) {
     // For screens <= 400px
-    positionX = 150; 
-    positionY = 100; 
-    scubaIcon.style.width = '50px'; 
+    positionX = 200; 
+    positionY = 200; 
+    scubaIcon.style.width = '80px'; 
     scubaIcon.style.height = 'auto';
   } else {
     // For larger screens
