@@ -762,6 +762,9 @@ figure > div, #the-red > div {
     width: 100%;
   }
 
+  h1 {
+    font-size: 60px;
+  }
   p {
     font-size: 13px;
   }
@@ -782,5 +785,13 @@ figure > div, #the-red > div {
   h4 {
     font-size: 18px;
   }
+
+  .slick-slider {
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+    overflow: hidden; 
+  }
+  
 }
 
