@@ -330,8 +330,8 @@ function adjustForScreenSize() {
     // For larger screens
     positionX = 600;
     positionY = 200;
-    scubaIcon.style.width = '100px'; 
-    scubaIcon.style.height = '100px';
+    scubaIcon.style.width = '150px'; 
+    scubaIcon.style.height = 'auto';
   }
 
   updatePosition();

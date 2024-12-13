@@ -103,11 +103,8 @@ nav ul {
   font-family: 'Open Sans', sans-serif;
 }
 
-li a:link, li a:visited {
-}
-
 li a:hover {
-  color: yellow;
+  color: #022244;
 }
 
 .container {
@@ -214,14 +211,15 @@ p {
 }
 
 .nested-content {
-  display: grid;
+  display: flex;
   gap: 15px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  justify-content: center; 
+  align-items: center;  
   max-width: 80%;
   margin: 0 auto;
   padding: 0;
 }
+
 
 /*add media guery*/
 #free-btn, #scuba-btn {
@@ -254,7 +252,6 @@ p {
 
 #scuba-btn {
   background-image: url(../images/scubadiver.png);
-  justify-self: right;
 }
 
 
@@ -286,6 +283,21 @@ p {
   width: auto;
   z-index: 3;
 } 
+
+.avatar2 {
+  position: fixed;
+  left: 71%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+}
+
+.avatar2 > img  {
+  height: 700px;
+  width: auto;
+  z-index: 3;
+} 
+
 
 input[type="checkbox"] {
   width: 0; 
@@ -324,7 +336,7 @@ label[for="bcd-checkbox"] img {
 .checked {
   opacity: 0.25;
 }
-
+/*scuba-diving display*/
 #bcd-display > img {
   width: 85%;
 }
@@ -449,18 +461,19 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   z-index: 3;
 }
 
+/*freediving display*/
 label[for="longFins-checkbox"] img {
   margin-top: 1em;
 }
 
 #freemask-display img {
-  width: 25%;
+  width: 37%;
 }
 
 #freemask-display {
-  position: fixed;
-  top: 14vh;
-  left: 3755px;
+  position: absolute;
+  top: 10%;
+  left: 37.5%;
   z-index: 3;
 }
 
@@ -469,40 +482,40 @@ label[for="longFins-checkbox"] img {
 }
 
 #longFins-display {
-  position: fixed;
-  top: 47vh;
-  left: 3775px;
+  position: absolute;
+  top: 47%;
+  left: 10%;
   z-index: 1;
 }
 
 #freesnorkel-display img {
-  width: 21%;
+  width: 65%;
   transform: rotate(-90deg);
 }
 
 #freesnorkel-display {
-  position: fixed;
-  top: 13vh;
-  left: 3500px;
+  position: absolute;
+  top: 13%;
+  left: 40%;
   z-index: 3;
 }
 
 #freeweight-display img {
-  width: 10%;
+  width: 20%;
   transform: rotate(90deg);
 }
 
 #freeweight-display {
-  position: fixed;
-  top: 42vh;
-  left: 3750px;
+  position: absolute;
+  top: 42%;
+  left: 50%;
   z-index: 3;
 }
 
 #freediveComputer-display {
   position: fixed;
-  top: 42vh;
-  left: 4065px;
+  top: 43%;
+  left: 72%;
   z-index: 3;
 }
 
@@ -542,8 +555,8 @@ figure > div, #the-red > div {
 
 #simulation {
   margin: 3em auto;
-  width: 1300px;
-  height: 800px;
+  width: 100%;
+  height: 80%;
   border: 1px solid grey;
   position: relative;
   overflow: hidden;
@@ -562,7 +575,7 @@ figure > div, #the-red > div {
 #simulation > img:nth-of-type(2) {
   width: 200px;
   position: absolute;
-  top: 600px;
+  top: 80%;
   left: 260px;
   z-index: 2;
 }
@@ -570,7 +583,7 @@ figure > div, #the-red > div {
 #simulation > img:nth-of-type(3) {
   width: 430px;
   position: absolute;
-  top: 500px;
+  top: 62%;
   z-index: 1;
 }
 
@@ -688,45 +701,26 @@ figure > div, #the-red > div {
 }
 
 #movement {
+  position: fixed;
+  left: 85%;
+  top: 80%;
+  transform: translateX(-50%);
   display: grid;
-  grid-template-columns:55px 55px 55px;
-  grid-template-rows: 55px 55px 55px;
-  position: absolute;
-  top: 62vh;
-  left: 80%;
-  gap: 2px;
-  place-items: center;
+  grid-template-columns: 3em 3em 3em;
+  grid-template-rows: 3em 3em 3em;
+
 }
 
 #movement button {
   background-color: transparent;
   border: none;                 
   padding: 0;                  
-  width: 50px;                  
-  height: 50px; 
-  transition: transform 0.5s ease;      
-}
-
-#movement button:active {
-  transform: scale(1.1);
-}
-
-
-#movement img {
-  width: 50px;
+  width: 1em;                  
+  height: 1em;     
 }
 
 #up-Btn {
   grid-column: 2;
-}
-
-#down-Btn {
-  grid-row: 3;
-  grid-column: 2;
-}
-
-#left-Btn {
-  grid-column: 1;
 }
 
 #right-Btn {
@@ -734,12 +728,59 @@ figure > div, #the-red > div {
   grid-row: 2;
 }
 
-#movement > #the-red > div {
-  grid-column: 2;
+#left-Btn {
+  grid-column: 1;
   grid-row: 2;
+}
+
+#down-Btn {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#movement img {
+  width: 3em;
+}
+
+#the-red > div {
+  display: flex;
   border: 5px solid #ccc;
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  place-items: center;
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 30%;
+  right: 35%;
 }
+
+@media (max-width: 500px) {
+  .main {
+    line-height: 1.4;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    height: auto;
+    width: 100%;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .nested-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+
+  #scuba-btn, #free-btn {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
