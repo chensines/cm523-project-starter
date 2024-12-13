@@ -36,7 +36,7 @@ h3, h4, h6, p, button, figcaption {
   background-image: url('https://i.postimg.cc/3RkWFjxX/temp-Image8uv7-Io.avif');
   background-size: cover;
   background-position: bottom;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
