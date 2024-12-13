@@ -767,6 +767,14 @@ figure > div, #the-red > div {
     display: flex;
     flex-direction: column;
   }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
   
   .nested-content {
     width: 100%;
@@ -921,7 +929,6 @@ figure > div, #the-red > div {
     width: 300px;
     height: auto;
   }
-
 
   #freemask-display img {
     width: 35%;
