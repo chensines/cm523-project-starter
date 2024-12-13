@@ -779,15 +779,23 @@ figure > div, #the-red > div {
   #scuba-btn, #free-btn {
     margin-top: 1.5em;
     max-width: 380px;
-    height: auto;
+    min-height: 250px;
     padding: 1em;
   }
 
   #scuba-btn p, #free-btn p {
     font-size: 14px;
+    word-wrap: break-word; 
+  }
+
+  #scuba-btn p {
     margin: 0;
     padding: 0.5em;
-    word-wrap: break-word; 
+  }
+
+  #free-btn p {
+    margin: 1em 1em 1em auto;
+    text-align: right;
   }
   
   h4 {

@@ -11,6 +11,7 @@ $(document).ready(function () {
       $('#simulation').hide();
     });
   });
+  
 
   function initializeSlider() {
     $('.slick-slider').slick({
@@ -34,6 +35,7 @@ $(document).ready(function () {
 
     $(window).on('resize', function () {
       $('.slick-slider').slick('setPosition');
+      $('.slick-slide').css('overflow', 'hidden');
     });
     
 
