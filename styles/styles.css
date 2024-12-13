@@ -763,7 +763,7 @@ figure > div, #the-red > div {
 
   .container {
     width: 100%;
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: column;
   }
@@ -774,11 +774,13 @@ figure > div, #the-red > div {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
   
   #scuba-btn, #free-btn {
     margin: 1.5em auto;
-    max-width: 380px;
+    max-width: 400px;
     height: auto;
     padding: 1em;
   }
@@ -902,7 +904,14 @@ figure > div, #the-red > div {
     left: 67%;
   }
   
+  #booties-display {
+    top: 80.%;
+    left: 19%;
+  }
 
+  #booties-display > img {
+    width: 75%;
+  }
 
 
 }
