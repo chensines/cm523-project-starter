@@ -397,6 +397,11 @@ right.addEventListener('click', function () {
   updatePosition();
 });
 
+up.addEventListener('touchstart', moveUp);
+down.addEventListener('touchstart', moveDown);
+left.addEventListener('touchstart', moveLeft);
+right.addEventListener('touchstart', moveRight);
+
 
 adjustForScreenSize();
 window.addEventListener('resize', adjustForScreenSize);
