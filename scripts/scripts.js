@@ -340,6 +340,7 @@ function adjustForScreenSize() {
   updatePosition();
 }
 
+
 function updatePosition() {
   scubaIcon.style.left = `${positionX}px`;
   scubaIcon.style.top = `${positionY}px`;
@@ -400,8 +401,6 @@ right.addEventListener('click', function () {
 adjustForScreenSize();
 window.addEventListener('resize', adjustForScreenSize);
 
-
-updatePosition();
 
 
 
