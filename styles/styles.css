@@ -774,6 +774,7 @@ figure > div, #the-red > div {
   }
 
   h2 {
+    font-size: 2.5em;
     margin-top: 0.5em;
  }
 
@@ -839,19 +840,15 @@ figure > div, #the-red > div {
     height: auto;
   }
 
-  h6 {
-    font-size: 12px;
-  }
-
   .avatar {
     left: 38%;
-    top:13%;
+    top: 12%;
     transform: translate(-50%, -50%);
   }
 
   .avatar2 {
     left: 63%;
-    top:13%;
+    top: 12%;
     transform: translate(-50%, -50%);
   }
   
@@ -976,10 +973,6 @@ figure > div, #the-red > div {
   .slider-list-3 {
     margin-top: 0.5em;
     width: 100%;
-  }
-
-  .slider-list-3 > h2 {
-    font-size: 30px;
   }
 
   .slider-list-3 p {
