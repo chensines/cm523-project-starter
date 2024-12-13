@@ -753,7 +753,7 @@ figure > div, #the-red > div {
   right: 35%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .main {
     line-height: 1.4;
     overflow-x: hidden;
