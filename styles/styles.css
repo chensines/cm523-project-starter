@@ -756,57 +756,51 @@ figure > div, #the-red > div {
 @media (max-width: 500px) {
   .main {
     line-height: 1.4;
-    overflow-y: auto; 
     overflow-x: hidden;
     height: auto;
     width: 100%;
   }
 
-  #stay {
-    width: 100%;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  p {
-    font-size: 13px;
-  }
-
   .container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
   }
   
   .nested-content {
     width: 100%;
-    height: auto; 
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 10px;
   }
   
   #scuba-btn, #free-btn {
-    margin-top: 1.5em; 
+    margin-top: 1.5em;
     max-width: 380px;
-    height: 100%;
+    height: auto;
+    padding: 1em;
+  }
+
+  #scuba-btn p, #free-btn p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0.5em;
+    word-wrap: break-word; 
   }
   
   h4 {
     font-size: 18px;
   }
-  
+
   .slick-slider {
     width: 100%;
     max-width: 100%;
-    height: 100%; 
-    overflow: hidden; 
+    height: 100%;
+    overflow: hidden;
   }
-  
+
   #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive {
     font-size: 13px;
   }
@@ -820,4 +814,3 @@ figure > div, #the-red > div {
     font-size: 15px;
   }
 }
-
