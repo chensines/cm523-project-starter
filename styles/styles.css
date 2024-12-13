@@ -763,7 +763,8 @@ figure > div, #the-red > div {
   }
 
   #stay {
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
 
   h1 {
@@ -791,8 +792,8 @@ figure > div, #the-red > div {
   
   #scuba-btn, #free-btn {
     margin-top: 1.5em; 
-    width: 380px;
-    height: 250px;
+    max-width: 380px;
+    height: 100%;
   }
   
   h4 {
