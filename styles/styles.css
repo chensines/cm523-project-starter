@@ -279,12 +279,12 @@ p {
   top: 55%;
   transform: translate(-50%, -50%);
   padding: 4rem;
-  z-index: 2;
 }
 
 .avatar > img  {
   height: 700px;
   width: auto;
+  z-index: 3;
 } 
 
 input[type="checkbox"] {
@@ -332,14 +332,14 @@ label[for="bcd-checkbox"] img {
 #bcd-display {
   position: absolute;
   top: 19%;
-  z-index: 3;
+  z-index: 4;
 }
 
 #booties-display {
   position: absolute;
   top: 80.7%;
   left: 5%;
-  z-index: 3;
+  z-index: 4;
 }
 
 label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img, label[for="diveComputer-checkbox"] img, label[for="freediveComputer-checkbox"] img , label[for="regulator-checkbox"] img {
@@ -359,12 +359,11 @@ label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
   position: absolute;
   top: 10%;
   left: 37%;
-  z-index: 3;
+  z-index: 4;
 }
 
 #shortFins-display > img {
   width: 30%;
-    z-index: 1;
 }
 
 #shortFins-display {
@@ -389,7 +388,7 @@ label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img, label[for=
   position: absolute;
   top: 10%;
   left: 38%;
-  z-index: 3;
+  z-index: 4;
 }
 
 label[for="surface-checkbox"] img {
@@ -411,7 +410,7 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   position: absolute;
   top: 14%;
   left: 37%;
-  z-index: 3;
+  z-index: 4;
 }
 
 #weight-display > img{
@@ -423,24 +422,24 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
   position: absolute;
   top: 45%;
   left: 50%;
-  z-index: 3;
+  z-index: 4;
 }
 
 #surface-display > img {
-  width: 65%;
+  width: 45%;
   transform: rotate(90deg);
 }
 
 #surface-display {
   position: absolute;
-  top: 22%;
-  left: 3.5%;
+  top: 15%;
+  left: 26%;
   z-index: 1;
 }
 
 #diveComputer-display > img {
   width: 110%;
-  z-index: 3;
+  z-index: 4;
 }
 
 #diveComputer-display {
