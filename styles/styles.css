@@ -773,8 +773,8 @@ figure > div, #the-red > div {
     height: auto;
   }
 
- h2 {
-  margin-top: 0.5em;
+  h2 {
+    margin-top: 0.5em;
  }
 
   h5 {
@@ -831,7 +831,7 @@ figure > div, #the-red > div {
 
   #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive {
     font-size: 13px;
-    margin: auto 1em;
+    margin: auto 0.5em;
   }
 
   .avatar img, .avatar2 img {
@@ -851,14 +851,13 @@ figure > div, #the-red > div {
 
   .avatar2 {
     left: 63%;
-    top:11%;
+    top:13%;
     transform: translate(-50%, -50%);
   }
   
   .avatar > img, .avatar2 > img  {
     height: 400px;
     width: auto;
-
   } 
 
   .slider-list-1, .slider-list-2, .slider-list-3 {
@@ -868,6 +867,9 @@ figure > div, #the-red > div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .slider-list-1, .slider-list-2 {
     padding: 0;
     margin-top: 400px;
   }
@@ -973,18 +975,25 @@ figure > div, #the-red > div {
 
   .slider-list-3 {
     margin-top: 0.5em;
+    width: 100%;
+  }
+
+  .slider-list-3 > h2 {
+    font-size: 30px;
   }
 
   .slider-list-3 p {
-    margin-bottom: 0.5em;
+    margin: 0.5em;
+    font-size: 15px;
+    max-width: 280px;
   }
 
   figure {
-    max-width: 350px;
+    max-width: 280px;
   }
 
   figure img {
-    width: 50%;
+    width: 45%;
   }
 
   figure > div {
@@ -1004,6 +1013,7 @@ figure > div, #the-red > div {
   #simulation {
     width: 100%;
     height: auto;
+    overflow-y: hidden;
   }
 }
 
