@@ -45,21 +45,23 @@ h3, h4, h6, p, button, figcaption {
 }
 
 .logo-primary {
-  display: block;
-  width: 600px;
+  display: flex;
+  width: 40%;
   height: auto;
   margin-top: 2rem;
 }
 
 h1 {
-  font-size: 100px;
+  display: flex;
+  font-size: 4.5em;
   margin-top: 1em;
   text-shadow: 5px 5px 10px black;
 }
 
 #start-btn {
   font-weight: bold;
-  font-size: 24px;
+  display: flex;
+  font-size: 2em;
   background-color: #1F396F;
   border-radius: 2px;
   padding: 0.5em 1em;
@@ -84,23 +86,24 @@ a:link {
   display: flex;
 }
 
+/*footer*/
 nav {
   display: flex;
   list-style-type: none;
-  gap: 20px;
-  align-items: center;
+  justify-content: center;
   margin: 0 2em 0 auto;
 }
 
 nav ul {
   display: flex;
   list-style-type: none;
+  width: 400px;
+  text-align: center;
   gap: 50px;
   font-family: 'Open Sans', sans-serif;
 }
 
 li a:link, li a:visited {
-  color: white;
 }
 
 li a:hover {
@@ -108,12 +111,14 @@ li a:hover {
 }
 
 .container {
-  height: 100vh;
+  position: relative;
+  height: 90vh;
   width: 100%;
   background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
 }
 
 .container:nth-of-type(2) {
+  position: relative;
   width: 1550px;
   display: grid !important;
   grid-template-columns: 70% 30%;
@@ -135,10 +140,11 @@ h5 {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 3em;
   display: flex;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 2rem 1em;
+  text-align: center;
 }
 
 #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive  {
@@ -171,11 +177,10 @@ h3 {
 }
 
 #popup, #instructions-scuba, #instructions-free {
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  width: 30%;
-  height: 20%; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
   background-color: #81C1CE;
   padding: 0.5em 1em;
   text-align: center;
@@ -199,16 +204,6 @@ h3 {
   padding: 0.5em 1em;
 }
 
-.slick-dots {
-  list-style-type: none;
-  display: flex;
-  position: absolute;
-  top: -20px;
-  left: 42.5%;
-  width: 200px;
-  justify-content: space-evenly;
-}
-
 h4 {
   font-size: 30px;
   margin: 1em;
@@ -228,6 +223,7 @@ p {
   padding: 0;
 }
 
+/*add media guery*/
 #free-btn, #scuba-btn {
   background-size: cover;
   background-position: center;
@@ -261,19 +257,35 @@ p {
   justify-self: right;
 }
 
+
 .slider-list-1 img, .slider-list-2 img {
   display: flex;
   margin: 1em auto;
 }
 
+/*add media query*/
 .slider-list-1, .slider-list-2 {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr ;
+  grid-template-columns: 33% 34% 33% ;
   grid-template-rows: 30% 25% 30%;
-  width: 80%;
+  width: 70%;
   gap: 10px;
-  margin: auto;
+  overflow: hidden;
 }
+
+ .avatar {
+  position: fixed;
+  left: 46%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  z-index: 2;
+}
+
+.avatar > img  {
+  height: 700px;
+  width: auto;
+} 
 
 input[type="checkbox"] {
   width: 0; 
@@ -284,7 +296,6 @@ input[type="checkbox"] {
 .slick-prev, .slick-next {
   display: none !important;
 }
-
 
 label p {
   display: flex;
@@ -315,25 +326,20 @@ label[for="bcd-checkbox"] img {
 }
 
 #bcd-display > img {
-  width: 92%;
+  width: 85%;
 }
 
 #bcd-display {
-  position: fixed;
-  top: 21vh;
-  left: 27.5%;
+  position: absolute;
+  top: 19%;
   z-index: 3;
 }
 
 #booties-display {
-  position: fixed;
-  top: 78vh;
-  left: 27.3%;
+  position: absolute;
+  top: 80.7%;
+  left: 5%;
   z-index: 3;
-}
-
-#booties-display > img {
-  width: 92%;
 }
 
 label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img, label[for="diveComputer-checkbox"] img, label[for="freediveComputer-checkbox"] img , label[for="regulator-checkbox"] img {
@@ -345,26 +351,26 @@ label[for="mask-checkbox"] img, label[for="freemask-checkbox"] img {
   margin: 1em auto 0 auto;
 }
 
-
 #mask-display > img {
-  width: 26%;
+  width: 37%;
 }
 
 #mask-display {
-  position: fixed;
-  top: 13.5vh;
-  left: 27.15%;
+  position: absolute;
+  top: 10%;
+  left: 37%;
   z-index: 3;
 }
 
 #shortFins-display > img {
-  width: 26%;
+  width: 30%;
+    z-index: 1;
 }
 
 #shortFins-display {
-  position: fixed;
-  top: 55.5vh;
-  left: 22.5%;
+  position: absolute;
+  top: 85%;
+  left: -50%;
   transform: rotate(90deg);
   z-index: 1;
 }
@@ -375,14 +381,14 @@ label[for="snorkel-checkbox"] img, label[for="booties-checkbox"] img, label[for=
 }
 
 #snorkel-display > img {
-  width: 18%;
+  width: 66%;
   transform: rotate(-90deg);
 }
 
 #snorkel-display {
-  position: fixed;
-  top: 14vh;
-  left: 23.7%;
+  position: absolute;
+  top: 10%;
+  left: 38%;
   z-index: 3;
 }
 
@@ -398,67 +404,51 @@ label[for="weight-checkbox"] img, label[for="freeweight-checkbox"] img {
 }
 
 #regulator-display > img {
-  width: 10%;
+  width: 30%;
 }
 
 #regulator-display {
-  position: fixed;
-  top: 16vh;
-  left: 22.9%;
+  position: absolute;
+  top: 14%;
+  left: 37%;
   z-index: 3;
 }
 
 #weight-display > img{
-  width: 10%;
+  width: 20%;
   transform: rotate(90deg);
 }
 
 #weight-display {
-  position: fixed;
-  top: 45vh;
-  left: 27%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
   z-index: 3;
 }
 
 #surface-display > img {
-  width: 25%;
+  width: 65%;
   transform: rotate(90deg);
 }
 
 #surface-display {
-  position: fixed;
-  top: 22vh;
-  left: 23.5%;
+  position: absolute;
+  top: 22%;
+  left: 3.5%;
   z-index: 1;
 }
 
 #diveComputer-display > img {
-  width: 120%;
+  width: 110%;
+  z-index: 3;
 }
 
 #diveComputer-display {
-  position: fixed;
-  top: 43vh;
-  left: 31.45%;
-  z-index: 2;
+  position: absolute;
+  top: 44%;
+  left: 71.45%;
+  z-index: 3;
 }
-
-.slider-list-1 .avatar, .slider-list-2 .avatar {
-  display: block;
-  grid-column: 1/ 2;
-  grid-row: 1/ 4;
-  width: 330px;
-  height: 742.5px;
-  z-index: 2;
-  background-image: url(../images/avatar.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slider-list-1 .avatar > img, .slider-list-2 .avatar > img {
-  display: none;
-} 
 
 label[for="longFins-checkbox"] img {
   margin-top: 1em;
@@ -753,239 +743,4 @@ figure > div, #the-red > div {
   width: 42px;
   height: 42px;
   place-items: center;
-}
-/* Media query for screens*/
-@media (max-width: 400px) and (max-height: 860px) {
-  html, body, .main {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .logo-primary {
-    width: 300px; 
-    max-width: 90%;
-  }
-
-  h1 {
-    font-size: 50px; /* Reduced font size for better fit */
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    margin: 1em 0; /* Add spacing above and below */
-  }
-
-  #stay {
-    display: grid;
-    grid-template-columns: 120px auto;
-    grid-template-rows: auto;
-    width: 100%;
-    height: 5vh;
-    padding: 1em 0 0 0 ;
-  }
-
-  nav {
-    display: flex;
-    font-size: 12px;
-    line-height: 1.4;
-    align-items: flex-end;
-  }
-
-  nav ul {
-    gap: 25px;
-  }
-
-  .logo-secondary {
-    display: block;
-    padding: 0 1.5em
-  }
-
-  h6 {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .container {
-    width: 100%;
-    height: 120vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  h2 {
-    font-size: 28px;
-    width: 200px;
-    display: block;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .nested-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em; /* Add spacing between nested items */
-  }
-
-  #scuba-btn, #free-btn {
-    width: 100%; /* Buttons occupy full width */
-    max-width: 300px; /* Prevent buttons from exceeding layout */
-    height: 300px; /* Adjusted height for smaller screens */
-    margin: 0.5em 0 1em 0; 
-    background-size: cover;
-  }
-
-  #scuba-btn {
-    background-position: right; 
-  }
-
-  #free-btn {
-    background-position: left;
-  }
-
-  h5 {
-    font-size: 10px;
-    width: 15cap;
-    margin: 0.5em 3em;
-  }
-
-  h4 {
-    font-size: 20px;
-    margin: 0.5em;
-  }
-
-  #free-btn > h4 {
-    margin: 0.5em 0.5em 0.5em auto;
-  }
-
-  #scuba-btn > p, #free-btn > p {
-    max-width: 180px;
-    font-size: 13px; 
-    line-height: 1.4;
-  }
-
-  #scuba-btn > p {
-    margin: 0.5em;
-  } 
-  
-  #free-btn > p {
-    margin: 0.5em 0.5em 0.5em auto;
-  }
-
-  .slick-slider {
-    width: 100%; 
-    display: block;
-  }
-
-  /*.slick-track {
-    display: flex;
-  }*/
-
-  .slick-slide {
-    width: 100%; /* Responsive slide width with margins */
-    box-sizing: border-box; /* Prevent overflow */
-  }
-
-  #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive  {
-    font-size: 13px;
-    height: 40px;
-  }
-
-  .slider-list-1, .slider-list-2, .slider-list-3 {
-    display: flex;
-    flex-direction: column;
-    max-height: 120vh;
-    overflow-y: scroll; 
-    padding: 0.5em;
-  }
-
-  .slider-list-1 > .avatar, .slider-list-2 > .avatar {
-    display: none;
-  }
-
-  input[type="checkbox"] {
-    width: 30px; 
-    border-radius: 50%;
-    height: 30px; 
-    opacity: 1;
-  }
-
-  [id*="display"] {
-    opacity: 0;
-  }
-
- #instructions-scuba, #instructions-free, #popup {
-    width: 300px;
-    height: auto;
-    position: fixed;
-    top: 50%;
-    left: 50px;
-  }
-
-  #instructions-scuba > p, #instructions-free > p, #popup > p, figure > p{
-    line-height: 1.4;
-    font-size: 13px;
-  }
-
-  h3 {
-    font-size: 15px;
-  }
-
-  figure {
-    width: 300px;
-    margin: 0.5em auto;
-  }
-
-  figure > img {
-    width: 200px;
-  }
-
-  #simulation {
-    width: 350px;
-    height: 80vh;
-  }
-
-  #movement {
-    position: fixed;
-    top: 80vh;
-    left: 70%;
-    grid-template-columns: 30px 30px 30px;
-    grid-template-rows: 30px 30px 30px;
-  }
-
-  #movement > button, #movement > button > img {
-    width: 30px;
-  }
-
-  #movement > #the-red > div {
-    width: 30px;
-    height: 30px;
-    border: 2px;
-  }
-
-  .slider-list-3 > p,figcaption {
-    max-width: 350px;
-    font-size: 14px;
-    margin-bottom: 0.5em;
-  }
-
-  figure > div {
-    width: 60px;
-    height: 60px;
-  }
-
-
-
 }

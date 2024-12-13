@@ -51,13 +51,6 @@
           <a href="index.html"><img class="logo-secondary" src="images/logo-secondary.png" alt="logo of the website"></a>
           <h5>Let's Dive Together</h5>
         </div>
-        <nav>
-          <ul>
-            <li><a href="images/cm523project.pdf">Project</a></li>
-            <li><a href="images/uxreport.pdf">UX report</a></li>
-            <li><a href="images/sourcelist.pdf">Sourcet</a></li>
-          </ul>
-        </nav>
       </div>
       <div id="simulation">
         <!--https://codepen.io/rafaelavlucas/pen/LXGdYx?editors=1100-->
@@ -105,10 +98,37 @@
             <h2>Gear Up!</h2>
             <button id="nextBtn1">Next</button>
           </div>
-          <ul class="slider-list-1">
-            <div class="avatar">
-              <img src="images/avatar.png" alt="">
+          <div class="avatar">
+            <div id="surface-display" style="display: none">
+              <img src="images/surface.png" alt="an orange stick filled with air">
             </div>
+            <img src="images/avatar.png" alt="avatar">
+            <div id="shortFins-display" style="display: none">
+              <img src="images/shortfins.png" alt="Short fins for scuba divers">
+            </div>
+            <div id="bcd-display" style="display: none">
+              <img src="images/bcd1.png" alt="scuba diving backpack">
+            </div>
+            <div id="booties-display" style="display: none">
+              <img src="images/booties1.png" alt="black heavy black shoes made with wetsuit-materials">
+            </div>
+            <div id="mask-display" style="display: none">
+              <img src="images/mask.png" alt="diving goggles with blue frame">
+            </div>
+            <div id="snorkel-display" style="display: none">
+              <img src="images/snorkel.png" alt="yellow and black tube">
+            </div>
+            <div id="weight-display" style="display: none">
+              <img src="images/dive-weight .png" alt="a small brick of metal">
+            </div>
+            <div id="regulator-display" style="display: none">
+              <img src="images/regulator.png" alt="a yellow air controller">
+            </div>
+            <div id="diveComputer-display" style="display: none">
+              <img src="images/watch1.png" alt="a watch that can operate underwater">            
+            </div>
+          </div>
+          <ul class="slider-list-1">
             <label for="shortFins-checkbox">
               <div>
                 <input type="checkbox" id="shortFins-checkbox">
@@ -117,9 +137,6 @@
                 <img src="images/shortfins.png" alt="Short fins for scuba divers">
               </div>
             </label>
-            <div id="shortFins-display" style="display: none">
-              <img src="images/shortfins.png" alt="Short fins for scuba divers">
-            </div>
             <label for="bcd-checkbox">
               <div>
                 <input type="checkbox" id="bcd-checkbox">
@@ -128,9 +145,6 @@
                 <img src="images/bcd.png" alt="scuba diving backpack">
               </div>
             </label>
-            <div id="bcd-display" style="display: none">
-              <img src="images/bcd1.png" alt="scuba diving backpack">
-            </div>
             <label for="booties-checkbox">
               <div>
                 <input type="checkbox" id="booties-checkbox">
@@ -139,9 +153,6 @@
                 <img src="images/booties.webp" alt="black heavy booties">
               </div>
             </label>
-            <div id="booties-display" style="display: none">
-              <img src="images/booties1.png" alt="black heavy black shoes made with wetsuit-materials">
-            </div>
             <label for="mask-checkbox">
               <div>
                 <input type="checkbox" id="mask-checkbox">
@@ -150,9 +161,6 @@
                 <img src="images/mask.png" alt="diving goggles with blue frame">
               </div>
             </label>
-            <div id="mask-display" style="display: none">
-              <img src="images/mask.png" alt="diving goggles with blue frame">
-            </div>
             <label for="snorkel-checkbox">
               <div>
                 <input type="checkbox" id="snorkel-checkbox">
@@ -161,9 +169,6 @@
                 <img src="images/snorkel.png" alt="yellow and black tube">
               </div>
             </label>
-            <div id="snorkel-display" style="display: none">
-              <img src="images/snorkel.png" alt="yellow and black tube">
-            </div>
             <label for="surface-checkbox">
               <div>
                 <input type="checkbox" id="surface-checkbox">
@@ -172,9 +177,6 @@
                 <img src="images/surface.png" alt="an orange stick filled with air">
               </div>
             </label>
-            <div id="surface-display" style="display: none">
-              <img src="images/surface.png" alt="an orange stick filled with air">
-            </div>
             <label for="weight-checkbox">
               <div>
                 <input type="checkbox" id="weight-checkbox">
@@ -183,9 +185,6 @@
                 <img src="images/dive-weight .png" alt="a small brick of metal">
               </div>
             </label>
-            <div id="weight-display" style="display: none">
-              <img src="images/dive-weight .png" alt="a small brick of metal">
-            </div>
             <label for="regulator-checkbox">
               <div>
                 <input type="checkbox" id="regulator-checkbox">
@@ -194,9 +193,6 @@
                 <img src="images/regulator.png" alt="a yellow air controller">
               </div>
             </label>
-            <div id="regulator-display" style="display: none">
-              <img src="images/regulator.png" alt="a yellow air controller">
-            </div>
             <label for="diveComputer-checkbox">
               <div>
                 <input type="checkbox" id="diveComputer-checkbox">
@@ -205,9 +201,6 @@
                 <img src="images/divecomputer.webp" alt="a watch that can operate underwater">
               </div>
             </label>
-            <div id="diveComputer-display" style="display: none">
-              <img src="images/watch1.png" alt="a watch that can operate underwater">            
-            </div>
           </ul>
         </div>
         <div class="container">
@@ -296,6 +289,15 @@
           </div>
         </div>
       </div>
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="images/cm523project.pdf">Project</a></li>
+            <li><a href="images/uxreport.pdf">UX Report</a></li>
+            <li><a href="images/sourcelist.pdf">Source</a></li>
+          </ul>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>
