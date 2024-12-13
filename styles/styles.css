@@ -763,7 +763,7 @@ figure > div, #the-red > div {
 
   .container {
     width: 100%;
-    min-height: 100dvh;
+    height: auto;
     display: flex;
     flex-direction: column;
   }
@@ -777,9 +777,9 @@ figure > div, #the-red > div {
   }
   
   #scuba-btn, #free-btn {
-    margin-top: 1.5em;
+    margin: 1.5em auto;
     max-width: 380px;
-    min-height: 250px;
+    height: auto;
     padding: 1em;
   }
 
@@ -811,6 +811,7 @@ figure > div, #the-red > div {
 
   #prevBtn1, #nextBtn1, #prevBtn2, #nextBtn2, #prevBtn3, #dive {
     font-size: 13px;
+    margin: auto 1em;
   }
 
   .avatar img, .avatar2 img {
@@ -821,4 +822,87 @@ figure > div, #the-red > div {
   h6 {
     font-size: 15px;
   }
+
+  .avatar {
+    position: fixed;
+    left: 37%;
+    top:13%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+  }
+  
+  .avatar > img  {
+    height: 400px;
+    width: auto;
+    z-index: 3;
+  } 
+
+  .slider-list-1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 400px;
+  }
+
+  #bcd-display > img {
+    width: 75%;
+  }
+  
+  #bcd-display {
+    top: 21%;
+  }
+
+  #snorkel-display {
+    top: 11%;
+  }
+
+  #regulator-display {
+    top: 17%;
+  }
+
+  #mask-display {
+    top: 15%;
+    left: 40%;
+  }
+
+  #mask-display > img { 
+    width: 32%;
+  }
+
+  #snorkel-display > img {
+    width: 60%;
+  }
+  
+  #snorkel-display {
+    top: 15%;
+  }
+
+  #shortFins-display > img {
+    width: 28%;
+  }
+  
+  #surface-display > img {
+    width: 25%;
+  }
+  
+  #surface-display {
+    top: 17%;
+    left: 32%;
+  }
+  
+  #diveComputer-display > img {
+    width: 70%;
+  }
+  
+  #diveComputer-display {
+    left: 67%;
+  }
+  
+
+
+
 }
