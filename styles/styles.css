@@ -1014,5 +1014,10 @@ figure > div, #the-red > div {
   #movement {
     z-index: 4;
   }
+
+  #movement #the-red > div {
+    top: 30%;
+    right: 35%;
+  }
 }
 
