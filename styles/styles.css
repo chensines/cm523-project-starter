@@ -36,7 +36,7 @@ h3, h4, h6, p, button, figcaption {
   background-image: url('https://i.postimg.cc/3RkWFjxX/temp-Image8uv7-Io.avif');
   background-size: cover;
   background-position: bottom;
-  height: fit-content;
+  height: 100dvh;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -108,7 +108,7 @@ li a:hover {
 
 .container {
   position: relative;
-  height: fit-content;
+  height: 100%;
   width: 100%;
   background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(15,49,71,1) 100%);
 }
