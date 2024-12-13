@@ -773,7 +773,7 @@ figure > div, #the-red > div {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
   
   .nested-content {
@@ -788,7 +788,7 @@ figure > div, #the-red > div {
   
   #scuba-btn, #free-btn {
     margin: 1.5em auto;
-    max-width: 400px;
+    max-width: 380px;
     height: auto;
     padding: 1em;
   }
